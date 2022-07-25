@@ -1,0 +1,1 @@
+#look up typo generator types

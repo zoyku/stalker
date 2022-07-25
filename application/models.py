@@ -2,7 +2,7 @@ from application import db
 
 
 class User(db.Model):
-    __tablename__='user'
+    __tablename__='uUser'
     id = db.Column(db.Integer(), primary_key=True)
     insertDate = db.Column(db.String(), nullable=False)
     updateDate = db.Column(db.String(), nullable=False)

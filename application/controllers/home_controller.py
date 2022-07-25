@@ -1,11 +1,8 @@
-#from stalker.application.models import Keyword_typo
-#from stalker.application import app
 from flask import render_template, request
-from application.models import User
+from application.models import User, KeywordTypo
 from application import db
 from application.controller import mod_pages
-import string
-import random
+from application.utils.home_utils import HomeUtils
 
 
 @mod_pages.route('/')
@@ -19,8 +16,6 @@ def user_page():
     keyword = request.args.get('keyword')
     register_name = request.args.get('registerName')
 
-    create_user(keyword, register_name)
-
-
+    HomeUtils.create_user(keyword, register_name)
 
     return render_template('user.html')
