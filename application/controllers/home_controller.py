@@ -11,32 +11,16 @@ import random
 @mod_pages.route('/')
 @mod_pages.route('/home')
 def home_page():
-    a = User.query.first()
-    print(a)
     return render_template('home.html')
 
 
 @mod_pages.route('/users')
 def user_page():
-
     keyword = request.args.get('keyword')
-    user1 = User(insert_date='01.01.2000', update_date='01.01.2000', register_name='ilkbank', keyword='ilkbank1')
-    db.session.add(user1)
-    db.session.commit()
-#    i = 0
-#    while i < 50:
-#        keyword1 = KeywordTypo()
-#        db.session.add(keyword1)
-#        db.session.commit()
-#        db.create_all()
-#        i += 1
+    register_name = request.args.get('registerName')
+
+    create_user(keyword, register_name)
+
+
 
     return render_template('user.html')
-
-
-def typo_generator(phrase):
-
-    ix = random.choice(range(len(phrase)))
-    new_word = ''.join([phrase[w] if w != ix else random.choice(string.ascii_letters) for w in range(len(phrase))])
-
-    return new_word
