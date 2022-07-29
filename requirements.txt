@@ -12,3 +12,5 @@ MarkupSafe==2.1.1
 SQLAlchemy==1.4.39
 Werkzeug==2.1.2
 zipp==3.8.1
+
+whois~=0.9.16

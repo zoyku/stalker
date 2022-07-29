@@ -1,48 +1,34 @@
-import string
-import random
 import whois as whois
 from application import db
 from application.models import User, KeywordTypo
+from application.utils.typo_utils import TypoUtils
+import datetime
 
 
 class HomeUtils:
     @staticmethod
-    def typo_generator(phrase):
-        ix = random.choice(range(len(phrase)))
-        new_word = ''.join([phrase[w] if w != ix else random.choice(string.ascii_letters) for w in range(len(phrase))])
+    def create_user_and_keyword(keyword, register_name):
 
-        return new_word
-
-    @staticmethod
-    def create_user(keyword,register_name):
-
-        user1 = User(insert_date='01.01.2000', update_date='01.01.2000', register_name=register_name, keyword=keyword)
+        user1 = User(insert_date=datetime.datetime.utcnow(), update_date=datetime.datetime.utcnow(), register_name=register_name, keyword=keyword)
         db.session.add(user1)
         db.session.commit()
-        i = 0
-        while i < 50:
-            typo = HomeUtils.typo_generator(keyword)
-            keyword = KeywordTypo(keywordUser=User.query.filter_by(registerName=register_name), typo=typo)
-            db.session.add(keyword)
-            db.session.commit()
-            i += 1
 
-        return 0
+        keywords_with_typo = TypoUtils.callToTypo(keyword)
+
+        for keyword in list(set(keywords_with_typo)):
+            typo1 = KeywordTypo(user_id=User.query.filter_by(register_name=register_name).first().id, typo=keyword)
+            db.session.add(typo1)
+            db.session.commit()
+
+        if KeywordTypo.query.all()!=[]:
+            return True
+        else:
+            return False
+
 
     @staticmethod
-    def is_registered(new_word):
-        try:
-            w = whois.whois(new_word)
-        except Exception:
+    def is_unique(register_name):
+        if User.query.filter_by(register_name=register_name).all()!=[]:
             return False
         else:
-            return w.name
-
-    @staticmethod
-    def search_domain():
-        for user in User.query.all():
-            user_typo = KeywordTypo.query.filter_by(keywordUser=user.registerName)
-            for typo in user_typo:
-                domain_registered = HomeUtils.is_registered(typo + '.ml')
-                if domain_registered > 0:
-                    print('alarm')
+            return True

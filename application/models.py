@@ -1,18 +1,20 @@
+import datetime
+
 from application import db
 
 
 class User(db.Model):
-    __tablename__='uUser'
+    __tablename__ = 'user'
     id = db.Column(db.Integer(), primary_key=True)
-    insertDate = db.Column(db.String(), nullable=False)
-    updateDate = db.Column(db.String(), nullable=False)
-    registerName = db.Column(db.String(length=30), nullable=False, unique=True)
+    insert_date = db.Column(db.String(), nullable=False)
+    update_date = db.Column(db.String(), nullable=False, onupdate=datetime.datetime.utcnow())
+    register_name = db.Column(db.String(length=30), nullable=False, unique=True)
     keyword = db.Column(db.String(),  nullable=False, unique=True)
-    keywordTypos = db.relationship('KeywordTypo', backref='owned_user', lazy=True)
+    keyword_typos = db.relationship('KeywordTypo', backref='keyword_typo', lazy=True)
 
 
 class KeywordTypo(db.Model):
-    __tablename__='KeywordTypo'
+    __tablename__ = 'keyword_typo'
     id = db.Column(db.Integer(), primary_key=True)
-    keywordUser = db.Column(db.Integer(), db.ForeignKey('user.id'))
+    user_id = db.Column(db.Integer(), db.ForeignKey('user.id'))
     typo = db.Column(db.String(), nullable=False, unique=True)
