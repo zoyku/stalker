@@ -1,6 +1,6 @@
 import whois as whois
 from application import db
-from application.models import User, KeywordTypo
+from application.models_module import User, KeywordTypo
 from application.utils.home_utils import HomeUtils
 
 
