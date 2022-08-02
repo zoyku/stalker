@@ -9,8 +9,9 @@ class User(db.Model):
     insert_date = db.Column(db.String(), nullable=False)
     update_date = db.Column(db.String(), nullable=False, onupdate=datetime.datetime.utcnow())
     register_name = db.Column(db.String(length=30), nullable=False, unique=True)
-    keyword = db.Column(db.String(),  nullable=False, unique=True)
+    keyword = db.Column(db.String(), nullable=False, unique=True)
     keyword_typos = db.relationship('KeywordTypo', backref='keyword_typo', lazy=True)
+    taken_keyword_typos = db.relationship('PossiblePhishing', backref='possible_phishing', lazy=True)
 
 
 class KeywordTypo(db.Model):
@@ -18,3 +19,13 @@ class KeywordTypo(db.Model):
     id = db.Column(db.Integer(), primary_key=True)
     user_id = db.Column(db.Integer(), db.ForeignKey('user.id'))
     typo = db.Column(db.String(), nullable=False, unique=True)
+
+
+class PossiblePhishing(db.Model):
+    __tablename__ = 'possible_phishing'
+    id = db.Column(db.Integer(), primary_key=True)
+    possible_phishing_domain = db.Column(db.String(), nullable=False, unique=True)
+    user_id = db.Column(db.Integer(), db.ForeignKey('user.id'))
+    from_which_typo = db.Column(db.String(), nullable=False)
+    insert_date = db.Column(db.String(), nullable=False)
+    update_date = db.Column(db.String(), nullable=False, onupdate=datetime.datetime.utcnow())

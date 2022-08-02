@@ -1,12 +1,6 @@
-import whois as whois
-from application import db
-from application.models_module import User, KeywordTypo
-from application.utils.typo_utils import TypoUtils
-
-
 class CoreUtils:
     @staticmethod
     def get_tlds():
-        tld_list = ['.ml', '.tk', ]
+        tld_list = ['.ml', '.tk', '.com', '.org', '.net', '.gov', '.io', '.ca', '.edu', '.nl', '.eu']
 
         return tld_list

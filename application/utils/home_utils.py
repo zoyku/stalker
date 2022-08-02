@@ -9,10 +9,10 @@ class HomeUtils:
     @staticmethod
     def create_user_and_keyword(keyword, register_name):
         response = BaseResponse()
-        user1 = User.query.filter_by(register_name=register_name).first()
-        if not user1:
-            user1 = User(insert_date=datetime.datetime.utcnow(), update_date=datetime.datetime.utcnow(), register_name=register_name, keyword=keyword)
-            db.session.add(user1)
+        user = User.query.filter_by(register_name=register_name).first()
+        if not user:
+            user = User(insert_date=datetime.datetime.utcnow(), update_date=datetime.datetime.utcnow(), register_name=register_name, keyword=keyword)
+            db.session.add(user)
             db.session.commit()
 
             keywords_with_typo = TypoUtils.callToTypo(keyword)
