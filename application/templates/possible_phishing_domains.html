@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}
+  Possible Phishing Domains Page
+{% endblock %}
+
+{% block content %}
+<h1>POSSIBLE PHISHING DOMAINS PAGE</h1>
+
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <!-- Your Columns HERE -->
+                <th scope="col">ID</th>
+                <th scope="col">Domain</th>
+                <th scope="col">User ID</th>
+                <th scope="col">Typo</th>
+                <th scope="col">Insert Date</th>
+                <th scope="col">Update Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Your rows inside the table HERE: -->
+            {% for possible_phishing in possible_phishings %}
+                <tr>
+                    <td>{{ possible_phishing.id }}</td>
+                    <td>{{ possible_phishing.possible_phishing_domain }}</td>
+                    <td>{{ possible_phishing.user_id}}</td>
+                    <td>{{ possible_phishing.from_which_typo}}</td>
+                    <td>{{ possible_phishing.insert_date}}</td>
+                    <td>{{ possible_phishing.update_date}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+      
+{% endblock %}

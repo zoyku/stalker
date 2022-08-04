@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}
+  Keyword Typos Page
+{% endblock %}
+
+{% block content %}
+<h1>KEYWORD TYPOS PAGE</h1>
+
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <!-- Your Columns HERE -->
+                <th scope="col">ID</th>
+                <th scope="col">User ID</th>
+                <th scope="col">Typo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Your rows inside the table HERE: -->
+            {% for keyword_typo in keyword_typos %}
+                <tr>
+                    <td>{{ keyword_typo.id }}</td>
+                    <td>{{ keyword_typo.user_id }}</td>
+                    <td>{{ keyword_typo.typo}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+      
+{% endblock %}

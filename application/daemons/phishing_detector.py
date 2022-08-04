@@ -51,6 +51,6 @@ def detect_phishings(total_number_of_daemons, daemon_number):
 
 
 if __name__ == '__main__':
-    total_number_of_daemons = 1
+    total_number_of_daemons = 3
     daemon_number = 0
     detect_phishings(total_number_of_daemons, daemon_number)
