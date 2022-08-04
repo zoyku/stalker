@@ -1,5 +1,7 @@
 from flask import render_template, request, make_response, jsonify
 from application.models import User, KeywordTypo, PossiblePhishing
+from flask import render_template, redirect, url_for
+from application.forms import RegisterForm
 from application import db
 from application.controller import mod_pages
 from application.utils.home_utils import HomeUtils
@@ -11,23 +13,18 @@ def home_page():
     return render_template('home.html')
 
 
-@mod_pages.route('/save_keyword')
-def save_keyword():
-    keyword = request.args.get('keyword')
-    register_name = request.args.get('register_name')
+@mod_pages.route('/register', methods=['GET', 'POST'])
+def register():
+    form = RegisterForm()
+    if form.validate_on_submit():
+        HomeUtils.create_user_and_keyword(form.keyword.data, form.username.data, form.email_address.data, form.password1.data)
+        return redirect(url_for('pages.user'))
 
-    response = HomeUtils.create_user_and_keyword(keyword, register_name)
-
-    # users = User.query.all()
-    # keyword_typos = KeywordTypo.query.all()
-    # possible_phishings = PossiblePhishing.query.all()
-
-    return render_template('result.html')  # , users=users, keyword_typos=keyword_typos, possible_phishings=possible_phishings)
-    #make_response(jsonify(response.__dict__), response.response_code)
+    return render_template('register.html', form=form)
 
 
-@mod_pages.route('/users')
-def users():
+@mod_pages.route('/user')
+def user():
     users = User.query.all()
 
     return render_template('users.html', users=users)

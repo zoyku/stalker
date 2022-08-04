@@ -7,11 +7,12 @@ import datetime
 
 class HomeUtils:
     @staticmethod
-    def create_user_and_keyword(keyword, register_name):
+    def create_user_and_keyword(keyword, register_name, email_address, password):
         response = BaseResponse()
         user = User.query.filter_by(register_name=register_name).first()
         if not user:
-            user = User(insert_date=datetime.datetime.utcnow(), update_date=datetime.datetime.utcnow(), register_name=register_name, keyword=keyword)
+            user = User(insert_date=datetime.datetime.utcnow(), update_date=datetime.datetime.utcnow(), register_name=register_name,
+                        keyword=keyword, email_address=email_address, password=password)
             db.session.add(user)
             db.session.commit()
 

@@ -9,6 +9,8 @@ class User(db.Model):
     insert_date = db.Column(db.String(), nullable=False)
     update_date = db.Column(db.String(), nullable=False, onupdate=datetime.datetime.utcnow())
     register_name = db.Column(db.String(length=30), nullable=False, unique=True)
+    email_address = db.Column(db.String(length=30), unique=True)
+    password = db.Column(db.String(length=30), unique=True)
     keyword = db.Column(db.String(), nullable=False, unique=True)
     keyword_typos = db.relationship('KeywordTypo', backref='keyword_typo', lazy=True)
     taken_keyword_typos = db.relationship('PossiblePhishing', backref='possible_phishing', lazy=True)
