@@ -5,8 +5,5 @@ from wtforms.validators import Length, EqualTo, Email, DataRequired
 
 class RegisterForm(FlaskForm):
     username = StringField(label='User Name:')
-    email_address = StringField(label='Email Address:')
-    keyword =  StringField(label='Keyword:')
-    password1 = PasswordField(label='Password:')
-    password2 = PasswordField(label='Confirm Password:')
+    keyword = StringField(label='Keyword:')
     submit = SubmitField(label='Create Account')

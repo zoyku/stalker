@@ -1,7 +1,6 @@
 import datetime
 import time
-
-import whois as whois
+import whois
 
 from application import create_app, db
 from application.models import User, KeywordTypo, PossiblePhishing
@@ -51,6 +50,6 @@ def detect_phishings(total_number_of_daemons, daemon_number):
 
 
 if __name__ == '__main__':
-    total_number_of_daemons = 3
+    total_number_of_daemons = 1
     daemon_number = 0
     detect_phishings(total_number_of_daemons, daemon_number)
