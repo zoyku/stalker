@@ -32,9 +32,9 @@ def user():
 
 @mod_pages.route('/keyword_typos')
 def keyword_typos():
-    keyword_typos = KeywordTypo.query.all()
+    users = User.query.all()
 
-    return render_template('keyword_typos.html', keyword_typos=keyword_typos)
+    return render_template('keyword_typos.html', users=users)
 
 
 @mod_pages.route('/possible_phishing_domains')

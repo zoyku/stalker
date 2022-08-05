@@ -10,18 +10,22 @@
         <thead>
             <tr>
                 <!-- Your Columns HERE -->
-                <th scope="col">ID</th>
-                <th scope="col">User ID</th>
+                <th scope="col">User Name</th>
+                <th scope="col">Keyword</th>
                 <th scope="col">Typo</th>
             </tr>
         </thead>
         <tbody>
             <!-- Your rows inside the table HERE: -->
-            {% for keyword_typo in keyword_typos %}
+            {% for user in users %}
                 <tr>
-                    <td>{{ keyword_typo.id }}</td>
-                    <td>{{ keyword_typo.user_id }}</td>
-                    <td>{{ keyword_typo.typo}}</td>
+                    <td>{{ user.register_name }}</td>
+                    <td>{{ user.keyword }}</td>
+                    <td>
+                        {% for keyword_typo in user.keyword_typos %}
+                                {{ keyword_typo.typo }}
+                        {% endfor %}
+                    </td>
                 </tr>
             {% endfor %}
         </tbody>

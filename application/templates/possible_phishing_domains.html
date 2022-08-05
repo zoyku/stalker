@@ -12,8 +12,8 @@
                 <!-- Your Columns HERE -->
                 <th scope="col">ID</th>
                 <th scope="col">Domain</th>
-                <th scope="col">User ID</th>
-                <th scope="col">Typo</th>
+                <th scope="col">User Name</th>
+                <th scope="col">Keyword</th>
                 <th scope="col">Insert Date</th>
                 <th scope="col">Update Date</th>
             </tr>
@@ -23,9 +23,9 @@
             {% for possible_phishing in possible_phishings %}
                 <tr>
                     <td>{{ possible_phishing.id }}</td>
-                    <td>{{ possible_phishing.possible_phishing_domain }}</td>
-                    <td>{{ possible_phishing.user_id}}</td>
-                    <td>{{ possible_phishing.from_which_typo}}</td>
+                    <td><a  href="{{ possible_phishing.possible_phishing_domain }}" style="color:white">{{ possible_phishing.possible_phishing_domain }}</a></td>
+                    <td>{{ possible_phishing.register_name}}</td>
+                    <td>{{ possible_phishing.from_which_keyword}}</td>
                     <td>{{ possible_phishing.insert_date}}</td>
                     <td>{{ possible_phishing.update_date}}</td>
                 </tr>

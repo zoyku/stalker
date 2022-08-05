@@ -18,7 +18,7 @@ class HomeUtils:
             keywords_with_typo = TypoUtils.callToTypo(keyword)
 
             for keyword in list(set(keywords_with_typo)):
-                typo1 = KeywordTypo(user_id=User.query.filter_by(register_name=register_name).first().id, typo=keyword)
+                typo1 = KeywordTypo(register_name=User.query.filter_by(register_name=register_name).first().register_name, from_which_keyword=User.query.filter_by(register_name=register_name).first().keyword, typo=keyword)
                 db.session.add(typo1)
             try:
                 db.session.commit()
