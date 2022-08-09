@@ -8,28 +8,18 @@
     <div class="container">
         <form method="POST" class="form-register" style="color:white">
             {{ form.hidden_tag() }}
-            <h1 class="h3 mb-3 font-weight-normal">
+            <h1 class="h3 mb-3 font-weight-normal" style="margin-top: 30px">
                 Please Register a Keyword
             </h1>
             <br>
             {{ form.username.label() }}
             {{ form.username(class="form-control", placeholder="Register Name") }}
-
+            <br>
             {{ form.keyword.label() }}
             {{ form.keyword(class="form-control", placeholder="Keyword") }}
-
             <br>
-
             {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
-        {% if form %}
-            <ul class="errors">
-                {% for error in form %}
-                    <li>{{ error }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
         </form>
-
     </div>
     </body>
 {% endblock %}

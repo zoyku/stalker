@@ -1,8 +1,9 @@
+import json
+
 from flask import render_template, request, make_response, jsonify
 from application.models import User, KeywordTypo, PossiblePhishing
-from flask import render_template, redirect, url_for
+from flask import render_template, redirect, url_for, flash
 from application.forms import RegisterForm
-from application import db
 from application.controller import mod_pages
 from application.utils.home_utils import HomeUtils
 
@@ -19,6 +20,10 @@ def register():
     if form.validate_on_submit():
         HomeUtils.create_user_and_keyword(form.keyword.data, form.username.data)
         return redirect(url_for('pages.user'))
+
+    if form.errors != {}:
+        for error_msg in form.errors.values():
+            flash(f'There has been an error: {error_msg}')
 
     return render_template('register.html', form=form)
 
