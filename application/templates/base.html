@@ -14,31 +14,31 @@
    </head>
    <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Phishing Controller</a>
+      <a class="navbar-brand" href="{{ url_for('pages.home_page') }}" style="font-size: 25px">Phishing Controller</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="{{ url_for('pages.home_page') }}">Home <span class="sr-only">(current)</span></a>
+        <ul class="navbar-nav mr-auto" style="padding: 5px 10px">
+            <li class="nav-item" style="padding: 0 10px; font-size: 18px">
+                <a class="nav-link" href="{{ url_for('pages.home_page') }}">Home</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('pages.register') }}">Register Page</a>
+            <li class="nav-item" style="padding: 0 10px; font-size: 18px">
+                <a class="nav-link" href="{{ url_for('pages.register') }}">Register</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" style="padding: 0 10px; font-size: 18px">
                 <a class="nav-link" href="{{ url_for('pages.user') }}">Users</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" style="padding: 0 10px; font-size: 18px">
                 <a class="nav-link" href="{{ url_for('pages.keyword_typos') }}">Keyword Typos</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" style="padding: 0 10px; font-size: 18px">
                 <a class="nav-link" href="{{ url_for('pages.possible_phishing_domains') }}">Possible Phishing Domains</a>
             </li>
         </ul>
       </div>
     </nav>
-    <div style="align-content: center; padding: 10px 20px">
+    <div style="align-content: center; padding: 20px 40px">
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
                 {% for category, message in messages %}

@@ -1,0 +1,303 @@
+[2022-08-09 10:47:10,532] INFO App started.
+[2022-08-09 10:47:10,574] INFO  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-08-09 10:47:10,577] INFO  * Restarting with stat
+[2022-08-09 10:47:11,159] INFO App started.
+[2022-08-09 10:47:11,166] WARNING  * Debugger is active!
+[2022-08-09 10:47:11,173] INFO  * Debugger PIN: 122-885-574
+[2022-08-09 10:48:31,204] INFO  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/__init__.py', reloading
+[2022-08-09 10:48:31,315] INFO  * Restarting with stat
+[2022-08-09 10:48:31,888] INFO App started.
+[2022-08-09 10:48:31,895] WARNING  * Debugger is active!
+[2022-08-09 10:48:31,902] INFO  * Debugger PIN: 122-885-574
+[2022-08-09 10:50:57,868] INFO  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/daemons/phishing_detector.py', reloading
+[2022-08-09 10:50:57,961] INFO  * Restarting with stat
+[2022-08-09 10:50:58,627] INFO App started.
+[2022-08-09 10:50:58,633] WARNING  * Debugger is active!
+[2022-08-09 10:50:58,641] INFO  * Debugger PIN: 122-885-574
+[2022-08-09 10:51:31,387] INFO App started.
+[2022-08-09 10:51:31,396] INFO  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-08-09 10:51:31,397] INFO  * Restarting with stat
+[2022-08-09 10:51:31,977] INFO App started.
+[2022-08-09 10:51:31,983] WARNING  * Debugger is active!
+[2022-08-09 10:51:31,991] INFO  * Debugger PIN: 122-885-574
+[2022-08-09 10:51:53,798] INFO 127.0.0.1 - - [09/Aug/2022 10:51:53] "GET / HTTP/1.1" 200 -
+[2022-08-09 10:51:54,181] INFO 127.0.0.1 - - [09/Aug/2022 10:51:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-09 10:51:55,444] INFO 127.0.0.1 - - [09/Aug/2022 10:51:55] "GET /register HTTP/1.1" 200 -
+[2022-08-09 10:52:01,129] INFO 127.0.0.1 - - [09/Aug/2022 10:52:01] "[32mPOST /register HTTP/1.1[0m" 302 -
+[2022-08-09 10:52:01,141] INFO 127.0.0.1 - - [09/Aug/2022 10:52:01] "GET /user HTTP/1.1" 200 -
+[2022-08-09 10:54:43,457] INFO  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/daemons/phishing_detector.py', reloading
+[2022-08-09 10:54:43,549] INFO  * Restarting with stat
+[2022-08-09 10:54:44,199] INFO App started.
+[2022-08-09 10:54:44,232] WARNING  * Debugger is active!
+[2022-08-09 10:54:44,240] INFO  * Debugger PIN: 122-885-574
+[2022-08-09 10:55:03,509] INFO  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/daemons/phishing_detector.py', reloading
+[2022-08-09 10:55:03,672] INFO  * Restarting with stat
+[2022-08-09 10:55:04,392] INFO App started.
+[2022-08-09 10:55:04,402] WARNING  * Debugger is active!
+[2022-08-09 10:55:04,414] INFO  * Debugger PIN: 122-885-574
+[2022-08-09 10:55:55,140] INFO  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/daemons/phishing_detector.py', reloading
+[2022-08-09 10:55:55,235] INFO  * Restarting with stat
+[2022-08-09 10:55:56,038] INFO App started.
+[2022-08-09 10:55:56,044] WARNING  * Debugger is active!
+[2022-08-09 10:55:56,050] INFO  * Debugger PIN: 122-885-574
+[2022-08-09 11:00:32,677] INFO  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/daemons/phishing_detector.py', reloading
+[2022-08-09 11:00:32,796] INFO  * Restarting with stat
+[2022-08-09 11:00:33,477] INFO App started.
+[2022-08-09 11:00:33,487] WARNING  * Debugger is active!
+[2022-08-09 11:00:33,494] INFO  * Debugger PIN: 122-885-574
+[2022-08-09 14:28:46,335] INFO 127.0.0.1 - - [09/Aug/2022 14:28:46] "GET /register HTTP/1.1" 200 -
+[2022-08-09 14:28:48,760] INFO 127.0.0.1 - - [09/Aug/2022 14:28:48] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 14:28:51,098] INFO 127.0.0.1 - - [09/Aug/2022 14:28:51] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:27:30,797] INFO App started.
+[2022-08-09 15:27:30,835] INFO  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-08-09 15:27:30,837] INFO  * Restarting with stat
+[2022-08-09 15:27:31,418] INFO App started.
+[2022-08-09 15:27:31,425] WARNING  * Debugger is active!
+[2022-08-09 15:27:31,480] INFO  * Debugger PIN: 122-885-574
+[2022-08-09 15:28:01,204] INFO 127.0.0.1 - - [09/Aug/2022 15:28:01] "GET / HTTP/1.1" 200 -
+[2022-08-09 15:28:36,798] INFO 127.0.0.1 - - [09/Aug/2022 15:28:36] "GET / HTTP/1.1" 200 -
+[2022-08-09 15:28:38,345] INFO 127.0.0.1 - - [09/Aug/2022 15:28:38] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:28:40,030] INFO 127.0.0.1 - - [09/Aug/2022 15:28:40] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:29:19,439] INFO 127.0.0.1 - - [09/Aug/2022 15:29:19] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:29:20,864] INFO 127.0.0.1 - - [09/Aug/2022 15:29:20] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:29:22,224] INFO 127.0.0.1 - - [09/Aug/2022 15:29:22] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:29:23,702] INFO 127.0.0.1 - - [09/Aug/2022 15:29:23] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:30:07,644] INFO 127.0.0.1 - - [09/Aug/2022 15:30:07] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:30:08,632] INFO 127.0.0.1 - - [09/Aug/2022 15:30:08] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:30:09,511] INFO 127.0.0.1 - - [09/Aug/2022 15:30:09] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:30:39,898] INFO 127.0.0.1 - - [09/Aug/2022 15:30:39] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:30:40,718] INFO 127.0.0.1 - - [09/Aug/2022 15:30:40] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:30:41,670] INFO 127.0.0.1 - - [09/Aug/2022 15:30:41] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:30:47,062] INFO 127.0.0.1 - - [09/Aug/2022 15:30:47] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:30:47,752] INFO 127.0.0.1 - - [09/Aug/2022 15:30:47] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:30:48,979] INFO 127.0.0.1 - - [09/Aug/2022 15:30:48] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:31:09,508] INFO 127.0.0.1 - - [09/Aug/2022 15:31:09] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:31:18,682] INFO 127.0.0.1 - - [09/Aug/2022 15:31:18] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:31:19,769] INFO 127.0.0.1 - - [09/Aug/2022 15:31:19] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:31:21,073] INFO 127.0.0.1 - - [09/Aug/2022 15:31:21] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:31:23,200] INFO 127.0.0.1 - - [09/Aug/2022 15:31:23] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:31:29,475] INFO 127.0.0.1 - - [09/Aug/2022 15:31:29] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:31:32,043] INFO 127.0.0.1 - - [09/Aug/2022 15:31:32] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:31:56,311] INFO 127.0.0.1 - - [09/Aug/2022 15:31:56] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:32:06,822] INFO 127.0.0.1 - - [09/Aug/2022 15:32:06] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:32:07,926] INFO 127.0.0.1 - - [09/Aug/2022 15:32:07] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:32:18,290] INFO 127.0.0.1 - - [09/Aug/2022 15:32:18] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:32:21,783] INFO 127.0.0.1 - - [09/Aug/2022 15:32:21] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:32:29,517] INFO 127.0.0.1 - - [09/Aug/2022 15:32:29] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:32:30,432] INFO 127.0.0.1 - - [09/Aug/2022 15:32:30] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:32:33,012] INFO 127.0.0.1 - - [09/Aug/2022 15:32:33] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:32:53,361] INFO 127.0.0.1 - - [09/Aug/2022 15:32:53] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:33:02,233] INFO 127.0.0.1 - - [09/Aug/2022 15:33:02] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:33:02,949] INFO 127.0.0.1 - - [09/Aug/2022 15:33:02] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:33:08,234] INFO 127.0.0.1 - - [09/Aug/2022 15:33:08] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:33:08,875] INFO 127.0.0.1 - - [09/Aug/2022 15:33:08] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:33:28,064] INFO 127.0.0.1 - - [09/Aug/2022 15:33:28] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:33:43,124] INFO 127.0.0.1 - - [09/Aug/2022 15:33:43] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:33:43,683] INFO 127.0.0.1 - - [09/Aug/2022 15:33:43] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:33:54,631] INFO 127.0.0.1 - - [09/Aug/2022 15:33:54] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:34:18,084] INFO 127.0.0.1 - - [09/Aug/2022 15:34:18] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:34:49,643] ERROR Same username and keyword.
+[2022-08-09 15:34:49,647] INFO 127.0.0.1 - - [09/Aug/2022 15:34:49] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2022-08-09 15:34:54,184] INFO 127.0.0.1 - - [09/Aug/2022 15:34:54] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:35:25,964] INFO 127.0.0.1 - - [09/Aug/2022 15:35:25] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:35:32,173] ERROR Same username and keyword.
+[2022-08-09 15:35:32,176] INFO 127.0.0.1 - - [09/Aug/2022 15:35:32] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2022-08-09 15:35:34,971] INFO 127.0.0.1 - - [09/Aug/2022 15:35:34] "GET /home HTTP/1.1" 200 -
+[2022-08-09 15:36:32,782] INFO 127.0.0.1 - - [09/Aug/2022 15:36:32] "GET /home HTTP/1.1" 200 -
+[2022-08-09 15:36:47,295] INFO 127.0.0.1 - - [09/Aug/2022 15:36:47] "GET /home HTTP/1.1" 200 -
+[2022-08-09 15:37:06,168] INFO 127.0.0.1 - - [09/Aug/2022 15:37:06] "GET /home HTTP/1.1" 200 -
+[2022-08-09 15:37:08,694] INFO 127.0.0.1 - - [09/Aug/2022 15:37:08] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:37:09,619] INFO 127.0.0.1 - - [09/Aug/2022 15:37:09] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:37:10,495] INFO 127.0.0.1 - - [09/Aug/2022 15:37:10] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:37:11,913] INFO 127.0.0.1 - - [09/Aug/2022 15:37:11] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:37:13,043] INFO 127.0.0.1 - - [09/Aug/2022 15:37:13] "GET /home HTTP/1.1" 200 -
+[2022-08-09 15:37:13,828] INFO 127.0.0.1 - - [09/Aug/2022 15:37:13] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:37:14,593] INFO 127.0.0.1 - - [09/Aug/2022 15:37:14] "GET /home HTTP/1.1" 200 -
+[2022-08-09 15:40:48,171] INFO 127.0.0.1 - - [09/Aug/2022 15:40:48] "GET /home HTTP/1.1" 200 -
+[2022-08-09 15:41:19,287] INFO 127.0.0.1 - - [09/Aug/2022 15:41:19] "GET /home HTTP/1.1" 200 -
+[2022-08-09 15:41:25,355] INFO 127.0.0.1 - - [09/Aug/2022 15:41:25] "GET /home HTTP/1.1" 200 -
+[2022-08-09 15:43:37,567] INFO 127.0.0.1 - - [09/Aug/2022 15:43:37] "GET /home HTTP/1.1" 200 -
+[2022-08-09 15:43:37,579] INFO 127.0.0.1 - - [09/Aug/2022 15:43:37] "[33mGET /phish.png HTTP/1.1[0m" 404 -
+[2022-08-09 15:43:49,440] INFO 127.0.0.1 - - [09/Aug/2022 15:43:49] "GET /home HTTP/1.1" 200 -
+[2022-08-09 15:43:49,454] INFO 127.0.0.1 - - [09/Aug/2022 15:43:49] "[33mGET /phish.png HTTP/1.1[0m" 404 -
+[2022-08-09 15:44:29,006] INFO 127.0.0.1 - - [09/Aug/2022 15:44:29] "GET /home HTTP/1.1" 200 -
+[2022-08-09 15:44:29,017] INFO 127.0.0.1 - - [09/Aug/2022 15:44:29] "[33mGET /phish.png HTTP/1.1[0m" 404 -
+[2022-08-09 15:44:29,835] INFO 127.0.0.1 - - [09/Aug/2022 15:44:29] "GET /home HTTP/1.1" 200 -
+[2022-08-09 15:44:29,846] INFO 127.0.0.1 - - [09/Aug/2022 15:44:29] "[33mGET /phish.png HTTP/1.1[0m" 404 -
+[2022-08-09 15:44:31,145] INFO 127.0.0.1 - - [09/Aug/2022 15:44:31] "GET /home HTTP/1.1" 200 -
+[2022-08-09 15:44:31,156] INFO 127.0.0.1 - - [09/Aug/2022 15:44:31] "[33mGET /phish.png HTTP/1.1[0m" 404 -
+[2022-08-09 15:44:31,627] INFO 127.0.0.1 - - [09/Aug/2022 15:44:31] "GET /home HTTP/1.1" 200 -
+[2022-08-09 15:44:31,638] INFO 127.0.0.1 - - [09/Aug/2022 15:44:31] "[33mGET /phish.png HTTP/1.1[0m" 404 -
+[2022-08-09 15:44:47,141] INFO 127.0.0.1 - - [09/Aug/2022 15:44:47] "GET /home HTTP/1.1" 200 -
+[2022-08-09 15:45:19,345] INFO 127.0.0.1 - - [09/Aug/2022 15:45:19] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:45:23,512] INFO 127.0.0.1 - - [09/Aug/2022 15:45:23] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:45:32,915] INFO 127.0.0.1 - - [09/Aug/2022 15:45:32] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:45:33,744] INFO 127.0.0.1 - - [09/Aug/2022 15:45:33] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:45:36,427] INFO 127.0.0.1 - - [09/Aug/2022 15:45:36] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:45:41,093] INFO 127.0.0.1 - - [09/Aug/2022 15:45:41] "GET /home HTTP/1.1" 200 -
+[2022-08-09 15:45:43,324] INFO 127.0.0.1 - - [09/Aug/2022 15:45:43] "GET /home HTTP/1.1" 200 -
+[2022-08-09 15:45:44,812] INFO 127.0.0.1 - - [09/Aug/2022 15:45:44] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:45:45,961] INFO 127.0.0.1 - - [09/Aug/2022 15:45:45] "GET /home HTTP/1.1" 200 -
+[2022-08-09 15:46:14,566] INFO 127.0.0.1 - - [09/Aug/2022 15:46:14] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:46:15,320] INFO 127.0.0.1 - - [09/Aug/2022 15:46:15] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:46:15,943] INFO 127.0.0.1 - - [09/Aug/2022 15:46:15] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:46:16,550] INFO 127.0.0.1 - - [09/Aug/2022 15:46:16] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:46:17,507] INFO 127.0.0.1 - - [09/Aug/2022 15:46:17] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:46:18,351] INFO 127.0.0.1 - - [09/Aug/2022 15:46:18] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:46:19,683] INFO 127.0.0.1 - - [09/Aug/2022 15:46:19] "GET /home HTTP/1.1" 200 -
+[2022-08-09 15:47:28,584] INFO 127.0.0.1 - - [09/Aug/2022 15:47:28] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:47:30,296] INFO 127.0.0.1 - - [09/Aug/2022 15:47:30] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:47:31,029] INFO 127.0.0.1 - - [09/Aug/2022 15:47:31] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:47:35,028] INFO 127.0.0.1 - - [09/Aug/2022 15:47:35] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:47:42,913] INFO 127.0.0.1 - - [09/Aug/2022 15:47:42] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:47:48,133] INFO 127.0.0.1 - - [09/Aug/2022 15:47:48] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:47:49,515] INFO 127.0.0.1 - - [09/Aug/2022 15:47:49] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:47:51,264] INFO 127.0.0.1 - - [09/Aug/2022 15:47:51] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:47:57,147] INFO 127.0.0.1 - - [09/Aug/2022 15:47:57] "[32mPOST /register HTTP/1.1[0m" 302 -
+[2022-08-09 15:47:57,153] INFO 127.0.0.1 - - [09/Aug/2022 15:47:57] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:48:01,117] INFO 127.0.0.1 - - [09/Aug/2022 15:48:01] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:48:07,533] INFO 127.0.0.1 - - [09/Aug/2022 15:48:07] "[32mPOST /register HTTP/1.1[0m" 302 -
+[2022-08-09 15:48:07,538] INFO 127.0.0.1 - - [09/Aug/2022 15:48:07] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:49:32,396] INFO 127.0.0.1 - - [09/Aug/2022 15:49:32] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:49:35,581] INFO 127.0.0.1 - - [09/Aug/2022 15:49:35] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:49:38,446] INFO 127.0.0.1 - - [09/Aug/2022 15:49:38] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:50:16,732] INFO 127.0.0.1 - - [09/Aug/2022 15:50:16] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:50:20,623] INFO 127.0.0.1 - - [09/Aug/2022 15:50:20] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:50:21,297] INFO 127.0.0.1 - - [09/Aug/2022 15:50:21] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:50:22,650] INFO 127.0.0.1 - - [09/Aug/2022 15:50:22] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:50:23,254] INFO 127.0.0.1 - - [09/Aug/2022 15:50:23] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:50:24,302] INFO 127.0.0.1 - - [09/Aug/2022 15:50:24] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:50:24,841] INFO 127.0.0.1 - - [09/Aug/2022 15:50:24] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:50:41,698] INFO 127.0.0.1 - - [09/Aug/2022 15:50:41] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:50:57,130] INFO 127.0.0.1 - - [09/Aug/2022 15:50:57] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:51:27,076] INFO 127.0.0.1 - - [09/Aug/2022 15:51:27] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:51:33,066] INFO 127.0.0.1 - - [09/Aug/2022 15:51:33] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:51:35,327] INFO 127.0.0.1 - - [09/Aug/2022 15:51:35] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:51:36,698] INFO 127.0.0.1 - - [09/Aug/2022 15:51:36] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:52:00,945] INFO 127.0.0.1 - - [09/Aug/2022 15:52:00] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:52:08,160] INFO 127.0.0.1 - - [09/Aug/2022 15:52:08] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:52:11,264] INFO 127.0.0.1 - - [09/Aug/2022 15:52:11] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:52:21,658] INFO 127.0.0.1 - - [09/Aug/2022 15:52:21] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:52:22,379] INFO 127.0.0.1 - - [09/Aug/2022 15:52:22] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:52:24,733] INFO 127.0.0.1 - - [09/Aug/2022 15:52:24] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:52:26,603] INFO 127.0.0.1 - - [09/Aug/2022 15:52:26] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:52:30,606] INFO 127.0.0.1 - - [09/Aug/2022 15:52:30] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:53:10,670] INFO 127.0.0.1 - - [09/Aug/2022 15:53:10] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:53:41,962] INFO 127.0.0.1 - - [09/Aug/2022 15:53:41] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:53:47,263] INFO 127.0.0.1 - - [09/Aug/2022 15:53:47] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:54:00,605] INFO 127.0.0.1 - - [09/Aug/2022 15:54:00] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:54:16,509] INFO 127.0.0.1 - - [09/Aug/2022 15:54:16] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:55:16,879] INFO 127.0.0.1 - - [09/Aug/2022 15:55:16] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:55:22,716] INFO 127.0.0.1 - - [09/Aug/2022 15:55:22] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:55:29,816] INFO 127.0.0.1 - - [09/Aug/2022 15:55:29] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:55:32,036] INFO 127.0.0.1 - - [09/Aug/2022 15:55:32] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:55:40,249] INFO 127.0.0.1 - - [09/Aug/2022 15:55:40] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:55:50,137] INFO 127.0.0.1 - - [09/Aug/2022 15:55:50] "[32mPOST /register HTTP/1.1[0m" 302 -
+[2022-08-09 15:55:50,143] INFO 127.0.0.1 - - [09/Aug/2022 15:55:50] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:55:53,219] INFO 127.0.0.1 - - [09/Aug/2022 15:55:53] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:55:54,103] INFO 127.0.0.1 - - [09/Aug/2022 15:55:54] "GET /register HTTP/1.1" 200 -
+[2022-08-09 15:56:07,049] INFO 127.0.0.1 - - [09/Aug/2022 15:56:07] "POST /register HTTP/1.1" 200 -
+[2022-08-09 15:56:12,111] INFO 127.0.0.1 - - [09/Aug/2022 15:56:12] "[32mPOST /register HTTP/1.1[0m" 302 -
+[2022-08-09 15:56:12,117] INFO 127.0.0.1 - - [09/Aug/2022 15:56:12] "GET /user HTTP/1.1" 200 -
+[2022-08-09 15:56:13,809] INFO 127.0.0.1 - - [09/Aug/2022 15:56:13] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 15:56:18,125] INFO 127.0.0.1 - - [09/Aug/2022 15:56:18] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 15:58:04,229] INFO  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/daemons/phishing_detector.py', reloading
+[2022-08-09 15:58:04,301] INFO  * Restarting with stat
+[2022-08-09 15:58:05,142] INFO App started.
+[2022-08-09 15:58:05,182] WARNING  * Debugger is active!
+[2022-08-09 15:58:05,204] INFO  * Debugger PIN: 122-885-574
+[2022-08-09 15:59:03,077] INFO  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/daemons/phishing_detector.py', reloading
+[2022-08-09 15:59:03,150] INFO  * Restarting with stat
+[2022-08-09 15:59:04,839] INFO App started.
+[2022-08-09 15:59:04,869] WARNING  * Debugger is active!
+[2022-08-09 15:59:04,877] INFO  * Debugger PIN: 122-885-574
+[2022-08-09 15:59:26,182] INFO  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/daemons/phishing_detector.py', reloading
+[2022-08-09 15:59:26,454] INFO  * Restarting with stat
+[2022-08-09 15:59:27,194] INFO App started.
+[2022-08-09 15:59:27,200] WARNING  * Debugger is active!
+[2022-08-09 15:59:27,207] INFO  * Debugger PIN: 122-885-574
+[2022-08-09 16:00:19,953] INFO  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/daemons/phishing_detector.py', reloading
+[2022-08-09 16:00:20,138] INFO  * Restarting with stat
+[2022-08-09 16:00:20,913] INFO App started.
+[2022-08-09 16:00:20,919] WARNING  * Debugger is active!
+[2022-08-09 16:00:20,927] INFO  * Debugger PIN: 122-885-574
+[2022-08-09 16:00:39,192] INFO  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/daemons/phishing_detector.py', reloading
+[2022-08-09 16:00:39,578] INFO  * Restarting with stat
+[2022-08-09 16:00:40,437] INFO App started.
+[2022-08-09 16:00:40,446] WARNING  * Debugger is active!
+[2022-08-09 16:00:40,461] INFO  * Debugger PIN: 122-885-574
+[2022-08-09 16:00:56,013] INFO 127.0.0.1 - - [09/Aug/2022 16:00:56] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 16:01:59,619] INFO  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/daemons/phishing_detector.py', reloading
+[2022-08-09 16:01:59,721] INFO  * Restarting with stat
+[2022-08-09 16:02:00,478] INFO App started.
+[2022-08-09 16:02:00,489] WARNING  * Debugger is active!
+[2022-08-09 16:02:00,501] INFO  * Debugger PIN: 122-885-574
+[2022-08-09 16:02:34,434] INFO App started.
+[2022-08-09 16:02:34,444] INFO  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-08-09 16:02:34,445] INFO  * Restarting with stat
+[2022-08-09 16:02:35,079] INFO App started.
+[2022-08-09 16:02:35,086] WARNING  * Debugger is active!
+[2022-08-09 16:02:35,093] INFO  * Debugger PIN: 122-885-574
+[2022-08-09 16:02:43,619] INFO 127.0.0.1 - - [09/Aug/2022 16:02:43] "GET / HTTP/1.1" 200 -
+[2022-08-09 16:02:45,525] INFO 127.0.0.1 - - [09/Aug/2022 16:02:45] "GET /register HTTP/1.1" 200 -
+[2022-08-09 16:02:46,979] INFO 127.0.0.1 - - [09/Aug/2022 16:02:46] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 16:02:47,665] INFO 127.0.0.1 - - [09/Aug/2022 16:02:47] "GET /user HTTP/1.1" 200 -
+[2022-08-09 16:02:48,425] INFO 127.0.0.1 - - [09/Aug/2022 16:02:48] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 16:02:49,363] INFO 127.0.0.1 - - [09/Aug/2022 16:02:49] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 16:03:49,648] INFO 127.0.0.1 - - [09/Aug/2022 16:03:49] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:03:53,169] INFO 127.0.0.1 - - [09/Aug/2022 16:03:53] "GET /register HTTP/1.1" 200 -
+[2022-08-09 16:05:16,387] INFO 127.0.0.1 - - [09/Aug/2022 16:05:16] "GET /register HTTP/1.1" 200 -
+[2022-08-09 16:05:22,865] INFO 127.0.0.1 - - [09/Aug/2022 16:05:22] "GET /register HTTP/1.1" 200 -
+[2022-08-09 16:06:04,186] INFO 127.0.0.1 - - [09/Aug/2022 16:06:04] "GET /register HTTP/1.1" 200 -
+[2022-08-09 16:06:04,984] INFO 127.0.0.1 - - [09/Aug/2022 16:06:04] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:06:05,921] INFO 127.0.0.1 - - [09/Aug/2022 16:06:05] "GET /register HTTP/1.1" 200 -
+[2022-08-09 16:06:09,420] INFO 127.0.0.1 - - [09/Aug/2022 16:06:09] "GET /register HTTP/1.1" 200 -
+[2022-08-09 16:06:10,206] INFO 127.0.0.1 - - [09/Aug/2022 16:06:10] "GET /user HTTP/1.1" 200 -
+[2022-08-09 16:06:11,505] INFO 127.0.0.1 - - [09/Aug/2022 16:06:11] "GET /register HTTP/1.1" 200 -
+[2022-08-09 16:06:30,178] INFO 127.0.0.1 - - [09/Aug/2022 16:06:30] "GET /register HTTP/1.1" 200 -
+[2022-08-09 16:06:30,858] INFO 127.0.0.1 - - [09/Aug/2022 16:06:30] "GET /register HTTP/1.1" 200 -
+[2022-08-09 16:06:35,446] INFO 127.0.0.1 - - [09/Aug/2022 16:06:35] "GET /register HTTP/1.1" 200 -
+[2022-08-09 16:06:36,712] INFO 127.0.0.1 - - [09/Aug/2022 16:06:36] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:06:37,245] INFO 127.0.0.1 - - [09/Aug/2022 16:06:37] "GET /register HTTP/1.1" 200 -
+[2022-08-09 16:06:50,953] INFO 127.0.0.1 - - [09/Aug/2022 16:06:50] "GET /register HTTP/1.1" 200 -
+[2022-08-09 16:06:56,250] INFO 127.0.0.1 - - [09/Aug/2022 16:06:56] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:07:04,200] INFO 127.0.0.1 - - [09/Aug/2022 16:07:04] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:07:24,546] INFO 127.0.0.1 - - [09/Aug/2022 16:07:24] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:07:30,189] INFO 127.0.0.1 - - [09/Aug/2022 16:07:30] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:07:35,528] INFO 127.0.0.1 - - [09/Aug/2022 16:07:35] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:07:36,232] INFO 127.0.0.1 - - [09/Aug/2022 16:07:36] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:07:39,151] INFO 127.0.0.1 - - [09/Aug/2022 16:07:39] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:07:46,062] INFO 127.0.0.1 - - [09/Aug/2022 16:07:46] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:08:23,301] INFO 127.0.0.1 - - [09/Aug/2022 16:08:23] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:08:37,206] INFO 127.0.0.1 - - [09/Aug/2022 16:08:37] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:08:44,568] INFO 127.0.0.1 - - [09/Aug/2022 16:08:44] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:08:45,191] INFO 127.0.0.1 - - [09/Aug/2022 16:08:45] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:08:47,833] INFO 127.0.0.1 - - [09/Aug/2022 16:08:47] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:08:56,787] INFO 127.0.0.1 - - [09/Aug/2022 16:08:56] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:09:34,905] INFO 127.0.0.1 - - [09/Aug/2022 16:09:34] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:10:20,167] INFO 127.0.0.1 - - [09/Aug/2022 16:10:20] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:10:37,564] INFO 127.0.0.1 - - [09/Aug/2022 16:10:37] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:10:40,102] INFO 127.0.0.1 - - [09/Aug/2022 16:10:40] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 16:10:44,048] INFO 127.0.0.1 - - [09/Aug/2022 16:10:44] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:10:44,701] INFO 127.0.0.1 - - [09/Aug/2022 16:10:44] "GET /register HTTP/1.1" 200 -
+[2022-08-09 16:10:45,835] INFO 127.0.0.1 - - [09/Aug/2022 16:10:45] "GET /user HTTP/1.1" 200 -
+[2022-08-09 16:10:46,733] INFO 127.0.0.1 - - [09/Aug/2022 16:10:46] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 16:10:47,649] INFO 127.0.0.1 - - [09/Aug/2022 16:10:47] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 16:10:49,064] INFO 127.0.0.1 - - [09/Aug/2022 16:10:49] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:10:50,098] INFO 127.0.0.1 - - [09/Aug/2022 16:10:50] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:10:51,131] INFO 127.0.0.1 - - [09/Aug/2022 16:10:51] "GET /register HTTP/1.1" 200 -
+[2022-08-09 16:12:12,921] INFO 127.0.0.1 - - [09/Aug/2022 16:12:12] "GET /user HTTP/1.1" 200 -
+[2022-08-09 16:12:13,587] INFO 127.0.0.1 - - [09/Aug/2022 16:12:13] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 16:12:14,281] INFO 127.0.0.1 - - [09/Aug/2022 16:12:14] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 16:12:15,198] INFO 127.0.0.1 - - [09/Aug/2022 16:12:15] "GET /register HTTP/1.1" 200 -
+[2022-08-09 16:12:16,029] INFO 127.0.0.1 - - [09/Aug/2022 16:12:16] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:12:16,728] INFO 127.0.0.1 - - [09/Aug/2022 16:12:16] "GET /home HTTP/1.1" 200 -
+[2022-08-09 16:14:02,549] INFO 127.0.0.1 - - [09/Aug/2022 16:14:02] "GET /register HTTP/1.1" 200 -
+[2022-08-09 16:14:03,369] INFO 127.0.0.1 - - [09/Aug/2022 16:14:03] "GET /user HTTP/1.1" 200 -
+[2022-08-09 16:14:04,416] INFO 127.0.0.1 - - [09/Aug/2022 16:14:04] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 16:14:05,332] INFO 127.0.0.1 - - [09/Aug/2022 16:14:05] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 16:14:06,416] INFO 127.0.0.1 - - [09/Aug/2022 16:14:06] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-09 16:14:09,670] INFO 127.0.0.1 - - [09/Aug/2022 16:14:09] "GET /user HTTP/1.1" 200 -
+[2022-08-09 16:14:37,826] INFO 127.0.0.1 - - [09/Aug/2022 16:14:37] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-09 16:15:37,996] INFO  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/daemons/phishing_detector.py', reloading
+[2022-08-09 16:15:38,372] INFO  * Restarting with stat

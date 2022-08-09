@@ -10,8 +10,7 @@
         <thead>
             <tr>
                 <!-- Your Columns HERE -->
-                <th scope="col">ID</th>
-                <th scope="col">Domain</th>
+                <th scope="col">Phishing Domain</th>
                 <th scope="col">User</th>
                 <th scope="col">Keyword</th>
                 <th scope="col">Insert Date</th>
@@ -22,7 +21,6 @@
             <!-- Your rows inside the table HERE: -->
             {% for possible_phishing in possible_phishings %}
                 <tr>
-                    <td>{{ possible_phishing.id }}</td>
                     <td><a  href="{{ possible_phishing.possible_phishing_domain }}" style="color:white">{{ possible_phishing.possible_phishing_domain }}</a></td>
                     <td>{{ possible_phishing.register_name}}</td>
                     <td>{{ possible_phishing.from_which_keyword}}</td>

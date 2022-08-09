@@ -10,7 +10,6 @@
         <thead>
             <tr>
                 <!-- Your Columns HERE -->
-                <th scope="col">ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Keyword</th>
                 <th scope="col">Insert Date</th>
@@ -21,7 +20,6 @@
             <!-- Your rows inside the table HERE: -->
             {% for user in users %}
                 <tr>
-                    <td>{{ user.id }}</td>
                     <td>{{ user.register_name }}</td>
                     <td>{{ user.keyword}}</td>
                     <td>{{ user.insert_date }}</td>
