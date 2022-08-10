@@ -1,4 +1,5 @@
 from flask import abort
+import logging
 
 from application import db
 from application.models import User, KeywordTypo

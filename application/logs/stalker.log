@@ -301,3 +301,11 @@
 [2022-08-09 16:14:37,826] INFO 127.0.0.1 - - [09/Aug/2022 16:14:37] "GET /possible_phishing_domains HTTP/1.1" 200 -
 [2022-08-09 16:15:37,996] INFO  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/daemons/phishing_detector.py', reloading
 [2022-08-09 16:15:38,372] INFO  * Restarting with stat
+[2022-08-09 16:21:52,009] INFO  * Restarting with stat
+[2022-08-09 16:22:11,112] INFO  * Restarting with stat
+[2022-08-09 16:27:36,268] INFO  * Restarting with stat
+[2022-08-09 16:28:47,168] INFO  * Restarting with stat
+[2022-08-09 16:28:58,074] INFO  * Restarting with stat
+[2022-08-09 16:30:05,871] INFO  * Restarting with stat
+[2022-08-09 16:30:31,152] INFO  * Restarting with stat
+[2022-08-09 16:31:19,535] INFO  * Restarting with stat

@@ -32,3 +32,6 @@ class PossiblePhishing(db.Model):
     from_which_keyword = db.Column(db.String())
     insert_date = db.Column(db.String(), nullable=False)
     update_date = db.Column(db.String(), nullable=False, onupdate=datetime.datetime.utcnow())
+    is_approved = db.Column(db.Boolean)
+    is_false = db.Column(db.Boolean)
+    whois_record = db.Column(db.String)

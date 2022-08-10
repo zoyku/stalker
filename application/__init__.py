@@ -26,10 +26,6 @@ def create_app():
         app.logger.error('Same username and keyword.')
         return render_template('400.html'), 400
 
-#    def __page_not_found(e):
-#        return render_template('404.html'), 404
-
-#    app.register_error_handler(404, __page_not_found)
     app.register_error_handler(400, __page_wrong_request)
 
     app.logger.info('App started.')

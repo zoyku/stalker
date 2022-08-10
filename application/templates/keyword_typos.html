@@ -15,7 +15,7 @@
                 <th scope="col">Typo</th>
             </tr>
         </thead>
-        <tbody style="align-content: center; padding-right: 20px; padding-left: 20px">
+        <tbody style="align-content: center">
             <!-- Your rows inside the table HERE: -->
             {% for user in users %}
                 <tr>
@@ -23,12 +23,16 @@
                     <td>{{ user.keyword }}</td>
                     <td>
                         {% for keyword_typo in user.keyword_typos %}
-                                {{ keyword_typo.typo }},
+                                {{ keyword_typo.typo }}
+                            {% if not loop.last %},{% endif %}
                         {% endfor %}
                     </td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
+    <script>
+
+    </script>
       
 {% endblock %}

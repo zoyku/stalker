@@ -44,6 +44,20 @@ def keyword_typos():
 
 @mod_pages.route('/possible_phishing_domains')
 def possible_phishing_domains():
-    possible_phishings = PossiblePhishing.query.all()
+    value = request.args.get('value')
+    phishing_domain = request.args.get('phishing_domain')
+    status = request.args.get('status')
+
+    if status == 'false_positive':
+        PossiblePhishing.query.filter_by(possible_phishing_domain=phishing_domain).first().is_approved = False
+    elif status == 'approved':
+        PossiblePhishing.query.filter_by(possible_phishing_domain=phishing_domain).first().is_approved = True
+
+    if value == "Approved":
+        possible_phishings = PossiblePhishing.query.filter_by(is_approved=True).all()
+    elif value == "False Positive":
+        possible_phishings = PossiblePhishing.query.filter_by(is_approved=False).all()
+    else:
+        possible_phishings = PossiblePhishing.query.all()
 
     return render_template('possible_phishing_domains.html', possible_phishings=possible_phishings)
