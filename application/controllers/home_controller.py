@@ -6,6 +6,7 @@ from flask import render_template, redirect, url_for, flash
 from application.forms import RegisterForm
 from application.controller import mod_pages
 from application.utils.home_utils import HomeUtils
+from application.daemons.changing_status import ChangeStatus
 
 
 @mod_pages.route('/')
@@ -48,10 +49,7 @@ def possible_phishing_domains():
     phishing_domain = request.args.get('phishing_domain')
     status = request.args.get('status')
 
-    if status == 'false_positive':
-        PossiblePhishing.query.filter_by(possible_phishing_domain=phishing_domain).first().is_approved = False
-    elif status == 'approved':
-        PossiblePhishing.query.filter_by(possible_phishing_domain=phishing_domain).first().is_approved = True
+    ChangeStatus.changing_status(phishing_domain, status)
 
     if value == "Approved":
         possible_phishings = PossiblePhishing.query.filter_by(is_approved=True).all()
