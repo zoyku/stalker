@@ -34,4 +34,5 @@ class PossiblePhishing(db.Model):
     update_date = db.Column(db.String(), nullable=False, onupdate=datetime.datetime.utcnow())
     is_approved = db.Column(db.Boolean)
     is_false = db.Column(db.Boolean)
-    whois_record = db.Column(db.String)
+    whois_record = db.Column(db.JSON)
+    #whois.parser.WhoisCom
