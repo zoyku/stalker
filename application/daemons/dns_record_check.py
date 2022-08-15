@@ -41,6 +41,7 @@ def dns_ns_lookup(domain):
     else:
         return dns_ns_check
 
+
 def dns_mx_lookup(domain):
     #logging.info(domain)
     dns_mx_check = []
