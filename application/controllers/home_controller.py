@@ -19,7 +19,7 @@ def home_page():
 def register():
     form = RegisterForm()
     if form.validate_on_submit():
-        HomeUtils.create_user_and_keyword(form.keyword.data, form.username.data)
+        HomeUtils.create_user_and_keyword(form.keyword.data, form.username.data, form.category)
         return redirect(url_for('pages.user'))
 
     if form.errors != {}:
@@ -55,6 +55,8 @@ def possible_phishing_domains():
         possible_phishings = PossiblePhishing.query.filter_by(is_approved=True).all()
     elif value == "False Positive":
         possible_phishings = PossiblePhishing.query.filter_by(is_approved=False).all()
+    elif value == "Undetermined":
+        possible_phishings = PossiblePhishing.query.filter_by(is_approved=None).all()
     else:
         possible_phishings = PossiblePhishing.query.all()
 

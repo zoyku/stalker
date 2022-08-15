@@ -1,4 +1,5 @@
 import datetime
+from datetime import datetime
 import time
 import whois
 import logging
@@ -6,6 +7,7 @@ import logging
 from application import create_app, db
 from application.models import User, KeywordTypo, PossiblePhishing
 from application.utils.core_utils import CoreUtils
+from application.utils.words_utils import WordUtils
 
 logging.basicConfig(filename='../logs/phishing_detector.log', format="[%(asctime)s] %(levelname)s %(message)s",
                     level=logging.INFO)
@@ -14,7 +16,7 @@ logging.basicConfig(filename='../logs/phishing_detector.log', format="[%(asctime
 def change_date_format(domain_date):
     if type(domain_date) == list:
         domain_date = domain_date[0].strptime(domain_date[0].strftime('%Y-%b-%d'),
-                                                                '%Y-%b-%d')
+                                              '%Y-%b-%d')
 
     return domain_date
 
@@ -29,6 +31,40 @@ def adding_tlds(keywords):
     return checked_domains
 
 
+def adding_words_and_tlds(user):
+    keyword = user.keyword
+    words = WordUtils.get_words(user.category)
+    tlds = CoreUtils.get_tlds()
+    word_added_domains = []
+    checked_domains = []
+    for word in words:
+        word_added_domains.append(keyword + word)
+
+    for word in word_added_domains:
+        for tld in tlds:
+            checked_domains.append(word + tld)
+
+    return checked_domains
+
+
+def domain_info_to_dict(domain_info):
+    domain_creation_time = None
+    domain_expiration_time = None
+    domain_updated_time = None
+    if domain_info.creation_date is not None:
+        domain_creation_time = change_date_format(domain_info.creation_date).strftime("%Y-%b-%d")
+    if domain_info.expiration_date is not None:
+        domain_expiration_time = change_date_format(domain_info.expiration_date).strftime("%Y-%b-%d")
+    if domain_info.updated_date is not None:
+        domain_updated_time = change_date_format(domain_info.updated_date).strftime("%Y-%b-%d")
+    domain_info_changed = dict(domain_info)
+    update = {'updated_date': domain_updated_time, 'creation_date': domain_creation_time,
+              'expiration_date': domain_expiration_time}
+    domain_info_changed.update(update)
+
+    return domain_info_changed
+
+
 def detect_phishings(total_number_of_daemons, daemon_number):
     app = create_app()
     with app.app_context():
@@ -38,6 +74,7 @@ def detect_phishings(total_number_of_daemons, daemon_number):
                 app.logger.info("Checking for keyword '%s' for user %s" % (user.keyword, user.register_name))
                 keywords = KeywordTypo.query.filter_by(user_id=user.id)
                 checked_domains = adding_tlds(keywords)
+                checked_domains += adding_words_and_tlds(user)
                 for checked_domain in checked_domains:
                     is_exist = PossiblePhishing.query.filter_by(possible_phishing_domain=checked_domain).first()
                     if is_exist is None:
@@ -48,36 +85,25 @@ def detect_phishings(total_number_of_daemons, daemon_number):
                         if domain_info.domain_name is not None:
                             domain_creation_time = (change_date_format(domain_info.creation_date))
                             if True or domain_creation_time > datetime.datetime.now() - datetime.timedelta(
-                                    days=2):
+                                    days=2):  # todo
                                 app.logger.info("Found a registered possible phishing domain.")
-                                domain_creation_time = change_date_format(domain_info.creation_date).strftime("%Y-%b-%d")
-                                domain_expiration_time = change_date_format(domain_info.expiration_date).strftime("%Y-%b-%d")
-                                domain_updated_time = change_date_format(domain_info.updated_date).strftime("%Y-%b-%d")
-                                domain_info_changed = dict(domain_info)
-                                update = {'updated_date': domain_updated_time, 'creation_date': domain_creation_time, 'expiration_date':domain_expiration_time}
-                                domain_info_changed.update(update)
-                                is_exist_in_ppd = PossiblePhishing.query.filter_by(
-                                    possible_phishing_domain=checked_domain).first()
-                                if is_exist_in_ppd is None:
-                                    update_date = datetime.datetime.utcnow()
-                                    app.logger.debug(domain_info_changed)
-                                    phishing_domain = PossiblePhishing(possible_phishing_domain=checked_domain,
-                                                                       insert_date=datetime.datetime.utcnow(),
-                                                                       update_date=update_date,
-                                                                       from_which_keyword=user.keyword,
-                                                                       user_id=user.id,
-                                                                       register_name=user.register_name,
-                                                                       is_approved=None,
-                                                                       is_false=None,
-                                                                       whois_record=domain_info_changed)
-                                    db.session.add(phishing_domain)
-                                    db.session.commit()
-                                    user.update_date = update_date
-                                    db.session.commit()
-                                    app.logger.info("Possible phishing domain added to the database. User is "
-                                                    "updated.")
-                                else:
-                                    continue
+                                domain_info_changed = domain_info_to_dict(domain_info)
+                                app.logger.debug(domain_info_changed)
+                                phishing_domain = PossiblePhishing(possible_phishing_domain=checked_domain,
+                                                                   insert_date=datetime.datetime.utcnow(),
+                                                                   update_date=datetime.strptime(domain_info_changed['updated_date'], '%Y-%b-%d'),
+                                                                   from_which_keyword=user.keyword,
+                                                                   user_id=user.id,
+                                                                   register_name=user.register_name,
+                                                                   is_approved=None,
+                                                                   is_false=None,
+                                                                   whois_record=domain_info_changed)
+                                db.session.add(phishing_domain)
+                                db.session.commit()
+                                user.update_date = datetime.datetime.utcnow()
+                                db.session.commit()
+                                app.logger.info("Possible phishing domain added to the database. User is "
+                                                "updated.")
                         else:
                             continue
 

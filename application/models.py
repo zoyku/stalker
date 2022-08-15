@@ -1,6 +1,13 @@
 import datetime
+import enum
 
 from application import db
+
+
+class Category(enum.Enum):
+    Personal = 'personal'
+    Bank = 'bank'
+    Shopping = 'shopping'
 
 
 class User(db.Model):
@@ -10,6 +17,7 @@ class User(db.Model):
     update_date = db.Column(db.String(), nullable=False, onupdate=datetime.datetime.utcnow())
     register_name = db.Column(db.String(length=30), nullable=False)
     keyword = db.Column(db.String(), nullable=False, unique=True)
+    category = db.Column(db.Enum(Category), default=Category.Personal)
     keyword_typos = db.relationship('KeywordTypo', backref='keyword_typo', lazy=True)
     domains_with_typos = db.relationship('PossiblePhishing', backref='possible_phishing', lazy=True)
 
@@ -35,4 +43,3 @@ class PossiblePhishing(db.Model):
     is_approved = db.Column(db.Boolean)
     is_false = db.Column(db.Boolean)
     whois_record = db.Column(db.JSON)
-    #whois.parser.WhoisCom

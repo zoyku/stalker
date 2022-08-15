@@ -8,7 +8,7 @@
 
     <select style="padding: 5px 5px; margin-bottom: 10px; font-size: 18px; background-color: #212121; color: aliceblue; border-radius:5px" id="domain-types" onchange="change_domain_types()">
         <option style="background-color: #212121; color: aliceblue" id="All" value="All">Choose domain status</option>
-        <option style="background-color: #212121; color: aliceblue" id="All" value="All">All Possible Phishing Domains</option>
+        <option style="background-color: #212121; color: aliceblue" id="Undetermined" value="Undetermined">Possible Phishing Domains</option>
         <option style="background-color: #212121; color: aliceblue" id="Approved" value="Approved">Approved</option>
         <option style="background-color: #212121; color: aliceblue" id="False Positive" value="False Positive">False Positive</option>
     </select>
@@ -37,11 +37,11 @@
                     <td>{{ possible_phishing.insert_date}}</td>
                     <td>{{ possible_phishing.update_date}}</td>
                     <td style="text-align: center"><button onclick="change_status('{{ possible_phishing.possible_phishing_domain }}', 'false_positive')"
-                                                           style="background-color:red; padding: 10px 10px"
-                                                           type="button"></button></td>
+                                                           style="background-color:red; padding: 10px 10px; color: white; border-radius: 8px;"
+                                                           type="button"><i class="fa-solid fa-square-xmark"></i></button></td>
                     <td style="text-align: center"><button onclick="change_status('{{ possible_phishing.possible_phishing_domain }}', 'approved')"
-                                                           style="background-color:green; padding: 10px 10px"
-                                                           type="button"></button></td> <!-- todo-->
+                                                           style="background-color:green; padding: 10px 10px; color: white; border-radius: 8px;"
+                                                           type="button"><i class="fa-solid fa-circle-check"></i></button></td> <!-- todo-->
                 </tr>
             {% endfor %}
         </tbody>
@@ -51,11 +51,11 @@
         function change_domain_types(){
             const select = document.getElementById("domain-types");
             const value = select.options[select.selectedIndex].value;
-            window.location.href = `http://127.0.0.1:5000/possible_phishing_domains?value=${value}`;
+            window.location.href = '{{ url_for('pages.possible_phishing_domains') }}' + `?value=${value}`;
         }
 
         function change_status(phishing_domain, status){
-            window.location.href = `http://127.0.0.1:5000/possible_phishing_domains?phishing_domain=${phishing_domain}&status=${status}`;
+            window.location.href = '{{ url_for('pages.possible_phishing_domains') }}' + `?phishing_domain=${phishing_domain}&status=${status}`;
         }
     </script>
       

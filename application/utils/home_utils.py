@@ -10,7 +10,7 @@ import datetime
 
 class HomeUtils:
     @staticmethod
-    def create_user_and_keyword(keyword, register_name):
+    def create_user_and_keyword(keyword, register_name, category):
         response = BaseResponse()
         users = User.query.filter_by(register_name=register_name).all()
         for user in users:
@@ -20,7 +20,7 @@ class HomeUtils:
                 response.message = 'You can not search for the same keyword.'
                 abort(400)
 
-        new_user = User(insert_date=datetime.datetime.utcnow(), update_date=datetime.datetime.utcnow(), register_name=register_name, keyword=keyword)
+        new_user = User(insert_date=datetime.datetime.utcnow(), update_date=datetime.datetime.utcnow(), register_name=register_name, keyword=keyword, category=category)
         db.session.add(new_user)
         db.session.commit()
 
