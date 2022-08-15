@@ -3,11 +3,11 @@ import dns.resolver
 import logging
 
 logging.basicConfig(filename='../logs/phishing_detector.log', format="%(asctime)s %(levelname)s %(funcName)s: %("
-                                                                    "message)s", level=logging.INFO)
+                                                                     "message)s", level=logging.INFO)
 
 
 def dns_a_lookup(domain):
-    #logging.info(domain)
+    # logging.info(domain)
     dns_a_check = []
 
     try:
@@ -25,7 +25,7 @@ def dns_a_lookup(domain):
 
 
 def dns_ns_lookup(domain):
-    #logging.info(domain)
+    # logging.info(domain)
     dns_ns_check = []
 
     try:
@@ -43,7 +43,7 @@ def dns_ns_lookup(domain):
 
 
 def dns_mx_lookup(domain):
-    #logging.info(domain)
+    # logging.info(domain)
     dns_mx_check = []
 
     try:
