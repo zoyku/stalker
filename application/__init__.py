@@ -17,7 +17,7 @@ def create_app():
 
     from application.controllers.home_controller import mod_pages as page_module
 
-    logging.basicConfig(filename='stalker.log', format="[%(asctime)s] %(levelname)s %(message)s")
+    logging.basicConfig(filename='application/logs/stalker.log', format="[%(asctime)s] %(levelname)s %(message)s")
     app.logger.setLevel(app.config['LOG_LEVEL'])
 
     app.register_blueprint(page_module)
