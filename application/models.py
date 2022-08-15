@@ -43,3 +43,7 @@ class PossiblePhishing(db.Model):
     is_approved = db.Column(db.Boolean)
     is_false = db.Column(db.Boolean)
     whois_record = db.Column(db.JSON)
+    dns_a_record = db.Column(db.JSON())
+    dns_ns_record = db.Column(db.JSON())
+    dns_mx_record = db.Column(db.JSON())
+

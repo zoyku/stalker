@@ -1,15 +1,17 @@
 import datetime
+import json
 from datetime import datetime
 import time
 import whois
 import logging
 
 from application import create_app, db
+from application.daemons.dns_record_check import dns_a_lookup, dns_ns_lookup, dns_mx_lookup
 from application.models import User, KeywordTypo, PossiblePhishing
 from application.utils.core_utils import CoreUtils
 from application.utils.words_utils import WordUtils
 
-logging.basicConfig(filename='../logs/phishing_detector.log', format="[%(asctime)s] %(levelname)s %(message)s",
+logging.basicConfig(filename='../logs/phishing_detector.log', format="[%(asctime)s] %(levelname)s %(funcName)s: %(message)s",
                     level=logging.INFO)
 
 
@@ -89,18 +91,26 @@ def detect_phishings(total_number_of_daemons, daemon_number):
                                 app.logger.info("Found a registered possible phishing domain.")
                                 domain_info_changed = domain_info_to_dict(domain_info)
                                 app.logger.debug(domain_info_changed)
+                                dns_a_check = dns_a_lookup(checked_domain)
+                                dns_ns_check = dns_ns_lookup(checked_domain)
+                                dns_mx_check = dns_mx_lookup(checked_domain)
+                                app.logger.info(dns_a_check)
+                                app.logger.info(json.dumps(dns_a_check))
                                 phishing_domain = PossiblePhishing(possible_phishing_domain=checked_domain,
-                                                                   insert_date=datetime.datetime.utcnow(),
+                                                                   insert_date=datetime.utcnow(),
                                                                    update_date=datetime.strptime(domain_info_changed['updated_date'], '%Y-%b-%d'),
                                                                    from_which_keyword=user.keyword,
                                                                    user_id=user.id,
                                                                    register_name=user.register_name,
                                                                    is_approved=None,
                                                                    is_false=None,
-                                                                   whois_record=domain_info_changed)
+                                                                   whois_record=domain_info_changed,
+                                                                   dns_a_record=json.dumps(dns_a_check),
+                                                                   dns_ns_record=json.dumps(dns_ns_check),
+                                                                   dns_mx_record=json.dumps(dns_mx_check))
                                 db.session.add(phishing_domain)
                                 db.session.commit()
-                                user.update_date = datetime.datetime.utcnow()
+                                user.update_date = datetime.utcnow()
                                 db.session.commit()
                                 app.logger.info("Possible phishing domain added to the database. User is "
                                                 "updated.")

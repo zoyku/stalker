@@ -3,8 +3,8 @@ class WordUtils:
     def get_words(category):
         words = []
 
-        bank_words = ['bankasi', 'istanbul']
-        shopping_words = ['hediye', 'gift']
+        bank_words = ['bankasi', 'istanbul', 'kolaybasvuru']
+        shopping_words = ['hediye', 'gift', 'bedava']
         personal_words = ['official']
 
         if category.name == "Bank":

@@ -315,3 +315,61 @@
 [2022-08-15 15:54:09,630] INFO App started.
 [2022-08-15 15:54:09,637] WARNING  * Debugger is active!
 [2022-08-15 15:54:09,644] INFO  * Debugger PIN: 122-885-574
+[2022-08-15 15:55:19,600] INFO 127.0.0.1 - - [15/Aug/2022 15:55:19] "GET /register HTTP/1.1" 200 -
+[2022-08-15 15:55:22,644] INFO 127.0.0.1 - - [15/Aug/2022 15:55:22] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-15 15:55:27,935] INFO 127.0.0.1 - - [15/Aug/2022 15:55:27] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
+[2022-08-15 15:55:30,256] INFO 127.0.0.1 - - [15/Aug/2022 15:55:30] "GET /possible_phishing_domains?value=False%20Positive HTTP/1.1" 200 -
+[2022-08-15 15:55:32,440] INFO 127.0.0.1 - - [15/Aug/2022 15:55:32] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-15 15:55:44,159] INFO 127.0.0.1 - - [15/Aug/2022 15:55:44] "GET /register HTTP/1.1" 200 -
+[2022-08-15 15:55:48,301] INFO 127.0.0.1 - - [15/Aug/2022 15:55:48] "GET /user HTTP/1.1" 200 -
+[2022-08-15 15:55:49,346] INFO 127.0.0.1 - - [15/Aug/2022 15:55:49] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-15 15:55:53,111] INFO 127.0.0.1 - - [15/Aug/2022 15:55:53] "GET /home HTTP/1.1" 200 -
+[2022-08-15 15:55:54,607] INFO 127.0.0.1 - - [15/Aug/2022 15:55:54] "GET /home HTTP/1.1" 200 -
+[2022-08-15 15:55:55,522] INFO 127.0.0.1 - - [15/Aug/2022 15:55:55] "GET /home HTTP/1.1" 200 -
+[2022-08-15 15:55:56,622] INFO 127.0.0.1 - - [15/Aug/2022 15:55:56] "GET /home HTTP/1.1" 200 -
+[2022-08-15 15:55:57,310] INFO 127.0.0.1 - - [15/Aug/2022 15:55:57] "GET /register HTTP/1.1" 200 -
+[2022-08-15 15:55:58,495] INFO 127.0.0.1 - - [15/Aug/2022 15:55:58] "GET /user HTTP/1.1" 200 -
+[2022-08-15 15:56:00,034] INFO 127.0.0.1 - - [15/Aug/2022 15:56:00] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-15 15:56:01,411] INFO 127.0.0.1 - - [15/Aug/2022 15:56:01] "GET /user HTTP/1.1" 200 -
+[2022-08-15 15:56:06,698] INFO 127.0.0.1 - - [15/Aug/2022 15:56:06] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-15 15:56:09,474] INFO 127.0.0.1 - - [15/Aug/2022 15:56:09] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-15 15:57:52,452] INFO  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/utils/words_utils.py', reloading
+[2022-08-15 15:57:52,524] INFO  * Restarting with stat
+[2022-08-15 15:57:53,541] INFO App started.
+[2022-08-15 15:57:53,559] WARNING  * Debugger is active!
+[2022-08-15 15:57:53,591] INFO  * Debugger PIN: 122-885-574
+[2022-08-15 15:59:30,320] INFO  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/utils/words_utils.py', reloading
+[2022-08-15 15:59:30,444] INFO  * Restarting with stat
+[2022-08-15 15:59:31,249] INFO App started.
+[2022-08-15 15:59:31,258] WARNING  * Debugger is active!
+[2022-08-15 15:59:31,265] INFO  * Debugger PIN: 122-885-574
+[2022-08-15 15:59:39,410] INFO  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/utils/words_utils.py', reloading
+[2022-08-15 15:59:39,483] INFO  * Restarting with stat
+[2022-08-15 15:59:40,630] INFO App started.
+[2022-08-15 15:59:40,648] WARNING  * Debugger is active!
+[2022-08-15 15:59:40,678] INFO  * Debugger PIN: 122-885-574
+[2022-08-15 16:00:59,036] INFO  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/utils/words_utils.py', reloading
+[2022-08-15 16:00:59,194] INFO  * Restarting with stat
+[2022-08-15 16:00:59,810] INFO App started.
+[2022-08-15 16:00:59,817] WARNING  * Debugger is active!
+[2022-08-15 16:00:59,824] INFO  * Debugger PIN: 122-885-574
+[2022-08-15 16:01:22,225] INFO  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/utils/words_utils.py', reloading
+[2022-08-15 16:01:22,337] INFO  * Restarting with stat
+[2022-08-15 16:01:22,969] INFO App started.
+[2022-08-15 16:01:22,976] WARNING  * Debugger is active!
+[2022-08-15 16:01:22,985] INFO  * Debugger PIN: 122-885-574
+[2022-08-15 16:01:31,174] INFO  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/utils/words_utils.py', reloading
+[2022-08-15 16:01:31,261] INFO  * Restarting with stat
+[2022-08-15 16:01:32,144] INFO App started.
+[2022-08-15 16:01:32,153] WARNING  * Debugger is active!
+[2022-08-15 16:01:32,163] INFO  * Debugger PIN: 122-885-574
+[2022-08-15 16:11:16,808] INFO create_app: App started.
+[2022-08-15 16:11:16,848] INFO _log:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-08-15 16:11:16,849] INFO _log:  * Restarting with stat
+[2022-08-15 16:11:17,483] INFO create_app: App started.
+[2022-08-15 16:11:17,490] WARNING _log:  * Debugger is active!
+[2022-08-15 16:11:17,505] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-15 16:47:29,099] INFO create_app: App started.
+[2022-08-15 16:47:33,751] INFO create_app: App started.
+[2022-08-15 17:06:32,849] INFO create_app: App started.
+[2022-08-15 17:06:35,147] INFO create_app: App started.
