@@ -3519,3 +3519,5 @@ Registrars.
 [2022-08-16 16:09:56,512] INFO detect_phishings: Possible phishing domain added to the database. User is updated.
 [2022-08-16 17:37:09,721] INFO create_app: App started.
 [2022-08-16 17:37:09,756] INFO detect_phishings: Checking for keyword 'amazon' for user Zeynep
+[2022-08-16 17:49:44,347] INFO create_app: App started.
+[2022-08-16 17:49:44,380] INFO detect_phishings: Checking for keyword 'amazon' for user Zeynep
