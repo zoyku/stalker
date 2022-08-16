@@ -1073,3 +1073,7 @@
 [2022-08-16 17:48:02,154] INFO create_app: App started.
 [2022-08-16 17:48:04,840] INFO create_app: App started.
 [2022-08-16 17:48:36,598] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/daemons/content_checker.py', reloading
+[2022-08-16 17:48:36,911] INFO _log:  * Restarting with stat
+[2022-08-16 17:48:38,870] INFO create_app: App started.
+[2022-08-16 17:48:38,881] WARNING _log:  * Debugger is active!
+[2022-08-16 17:48:38,892] INFO _log:  * Debugger PIN: 122-885-574
