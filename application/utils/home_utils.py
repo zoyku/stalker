@@ -1,7 +1,9 @@
+import requests
+
 from flask import abort
 
 from application import db
-from application.models import User, KeywordTypo
+from application.models import User, KeywordTypo, RealWebPageContent
 from application.models_module.app_models import BaseResponse
 from application.utils.typo_utils import TypoUtils
 import datetime
@@ -23,6 +25,28 @@ class HomeUtils:
                         register_name=register_name, keyword=keyword, domain=domain, category=category)
         db.session.add(new_user)
         db.session.commit()
+
+        user_web_page_content = None
+        try:
+            user_web_page_content = requests.get('https://' + domain)
+        except requests.exceptions.RequestException:
+            pass
+
+        try:
+            user_web_page_content = requests.get('http://' + domain)
+        except requests.exceptions.RequestException:
+            pass
+
+        if user_web_page_content is not None:
+            new_web_page_content = RealWebPageContent(user_id=new_user.id,
+                                                      register_name=new_user.register_name,
+                                                      content=user_web_page_content.text,
+                                                      response_code=user_web_page_content.status_code,
+                                                      headers=str(user_web_page_content.headers))
+            db.session.add(new_web_page_content)
+            db.session.commit()
+        else:
+            abort(404)
 
         keywords_with_typo = TypoUtils.callToTypo(keyword)
 
