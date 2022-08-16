@@ -5,6 +5,8 @@ import time
 import whois
 import logging
 
+from whois.parser import PywhoisError
+
 from application import create_app, db
 from application.daemons.dns_record_check import dns_a_lookup, dns_ns_lookup, dns_mx_lookup
 from application.models import User, KeywordTypo, PossiblePhishing
@@ -41,6 +43,7 @@ def adding_words_and_tlds(user):
     checked_domains = []
     for word in words:
         word_added_domains.append(keyword + word)
+        word_added_domains.append(word + keyword)
 
     for word in word_added_domains:
         for tld in tlds:
@@ -82,7 +85,7 @@ def detect_phishings(total_number_of_daemons, daemon_number):
                     if is_exist is None:
                         try:
                             domain_info = whois.whois(checked_domain)
-                        except Exception as e:
+                        except PywhoisError:
                             continue
                         if domain_info.domain_name is not None:
                             domain_creation_time = (change_date_format(domain_info.creation_date))
@@ -94,11 +97,9 @@ def detect_phishings(total_number_of_daemons, daemon_number):
                                 dns_a_check = dns_a_lookup(checked_domain)
                                 dns_ns_check = dns_ns_lookup(checked_domain)
                                 dns_mx_check = dns_mx_lookup(checked_domain)
-                                app.logger.info(dns_a_check)
-                                app.logger.info(json.dumps(dns_a_check))
                                 phishing_domain = PossiblePhishing(possible_phishing_domain=checked_domain,
                                                                    insert_date=datetime.utcnow(),
-                                                                   update_date=datetime.strptime(domain_info_changed['updated_date'], '%Y-%b-%d'),
+                                                                   update_date=datetime.utcnow(),
                                                                    from_which_keyword=user.keyword,
                                                                    user_id=user.id,
                                                                    register_name=user.register_name,

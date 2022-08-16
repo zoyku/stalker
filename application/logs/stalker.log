@@ -373,3 +373,117 @@
 [2022-08-15 16:47:33,751] INFO create_app: App started.
 [2022-08-15 17:06:32,849] INFO create_app: App started.
 [2022-08-15 17:06:35,147] INFO create_app: App started.
+[2022-08-15 17:40:47,800] INFO create_app: App started.
+[2022-08-15 17:40:47,836] INFO _log:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-08-15 17:40:47,840] INFO _log:  * Restarting with stat
+[2022-08-15 17:40:48,449] INFO create_app: App started.
+[2022-08-15 17:40:48,454] WARNING _log:  * Debugger is active!
+[2022-08-15 17:40:48,470] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-15 17:41:04,566] INFO _log: 127.0.0.1 - - [15/Aug/2022 17:41:04] "GET /home HTTP/1.1" 200 -
+[2022-08-15 17:41:05,957] INFO _log: 127.0.0.1 - - [15/Aug/2022 17:41:05] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-15 17:41:06,639] INFO _log: 127.0.0.1 - - [15/Aug/2022 17:41:06] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-15 17:41:09,949] INFO _log: 127.0.0.1 - - [15/Aug/2022 17:41:09] "GET /possible_phishing_domains?phishing_domain=amazozn.ca&status=false_positive HTTP/1.1" 200 -
+[2022-08-15 17:41:13,147] INFO _log: 127.0.0.1 - - [15/Aug/2022 17:41:13] "GET /possible_phishing_domains?phishing_domain=amaz9n.ca&status=false_positive HTTP/1.1" 200 -
+[2022-08-15 17:41:18,224] INFO _log: 127.0.0.1 - - [15/Aug/2022 17:41:18] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-15 17:41:19,888] INFO _log: 127.0.0.1 - - [15/Aug/2022 17:41:19] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
+[2022-08-15 17:41:22,790] INFO _log: 127.0.0.1 - - [15/Aug/2022 17:41:22] "GET /possible_phishing_domains?value=False%20Positive HTTP/1.1" 200 -
+[2022-08-15 17:41:25,329] INFO _log: 127.0.0.1 - - [15/Aug/2022 17:41:25] "GET /possible_phishing_domains?phishing_domain=emazon.org&status=approved HTTP/1.1" 200 -
+[2022-08-15 17:41:28,288] INFO _log: 127.0.0.1 - - [15/Aug/2022 17:41:28] "GET /possible_phishing_domains?value=False%20Positive HTTP/1.1" 200 -
+[2022-08-15 17:41:30,706] INFO _log: 127.0.0.1 - - [15/Aug/2022 17:41:30] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
+[2022-08-16 10:08:13,282] INFO create_app: App started.
+[2022-08-16 10:08:13,297] INFO _log:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-08-16 10:08:13,299] INFO _log:  * Restarting with stat
+[2022-08-16 10:08:13,948] INFO create_app: App started.
+[2022-08-16 10:08:13,955] WARNING _log:  * Debugger is active!
+[2022-08-16 10:08:13,965] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 10:08:16,520] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:08:16] "GET / HTTP/1.1" 200 -
+[2022-08-16 10:08:17,186] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:08:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-16 10:08:20,102] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:08:20] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 10:08:28,372] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:08:28] "GET /possible_phishing_domains?phishing_domain=amazonl.com&status=false_positive HTTP/1.1" 200 -
+[2022-08-16 10:08:45,478] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:08:45] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
+[2022-08-16 10:08:47,861] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:08:47] "GET /possible_phishing_domains?value=False%20Positive HTTP/1.1" 200 -
+[2022-08-16 10:08:50,097] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:08:50] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-16 10:09:00,663] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:09:00] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
+[2022-08-16 10:09:02,530] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:09:02] "GET /possible_phishing_domains?value=False%20Positive HTTP/1.1" 200 -
+[2022-08-16 10:09:05,047] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:09:05] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-16 10:09:08,534] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:09:08] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-16 10:09:14,398] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:09:14] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-16 10:15:58,789] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:15:58] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
+[2022-08-16 10:16:00,007] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:16:00] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
+[2022-08-16 10:16:05,141] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:16:05] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-16 10:16:10,921] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:16:10] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-16 10:16:19,377] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:16:19] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 10:16:24,829] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:16:24] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-16 10:21:55,400] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:21:55] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
+[2022-08-16 10:24:21,625] INFO create_app: App started.
+[2022-08-16 10:24:21,634] INFO _log:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-08-16 10:24:21,635] INFO _log:  * Restarting with stat
+[2022-08-16 10:24:22,286] INFO create_app: App started.
+[2022-08-16 10:24:22,292] WARNING _log:  * Debugger is active!
+[2022-08-16 10:24:22,303] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 10:24:24,975] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:24:24] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 10:24:27,417] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:24:27] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
+[2022-08-16 10:24:51,638] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:24:51] "GET /possible_phishing_domains?value=False%20Positive HTTP/1.1" 200 -
+[2022-08-16 10:25:57,142] INFO create_app: App started.
+[2022-08-16 10:25:57,152] INFO _log:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-08-16 10:25:57,153] INFO _log:  * Restarting with stat
+[2022-08-16 10:25:58,100] INFO create_app: App started.
+[2022-08-16 10:25:58,108] WARNING _log:  * Debugger is active!
+[2022-08-16 10:25:58,115] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 10:25:58,320] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:25:58] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-16 10:26:00,016] INFO _log: 127.0.0.1 - - [16/Aug/2022 10:26:00] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 11:29:48,327] INFO create_app: App started.
+[2022-08-16 11:29:48,342] INFO _log:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-08-16 11:29:48,343] INFO _log:  * Restarting with stat
+[2022-08-16 11:29:48,902] INFO create_app: App started.
+[2022-08-16 11:29:48,908] WARNING _log:  * Debugger is active!
+[2022-08-16 11:29:48,924] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 11:30:58,830] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:30:58] "GET / HTTP/1.1" 200 -
+[2022-08-16 11:31:05,417] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:31:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-16 11:31:06,846] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:31:06] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 11:31:08,910] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:31:08] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-16 11:31:11,401] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:31:11] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
+[2022-08-16 11:31:13,575] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:31:13] "GET /possible_phishing_domains?value=False%20Positive HTTP/1.1" 200 -
+[2022-08-16 11:31:15,856] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:31:15] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-16 11:38:58,028] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:38:58] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-16 11:39:03,615] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:39:03] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
+[2022-08-16 11:39:32,443] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:39:32] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-16 11:42:24,952] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:42:24] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
+[2022-08-16 11:42:27,730] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:42:27] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-16 11:42:31,361] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:42:31] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
+[2022-08-16 11:42:33,762] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:42:33] "GET /possible_phishing_domains?value=False%20Positive HTTP/1.1" 200 -
+[2022-08-16 11:44:41,758] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:44:41] "GET /possible_phishing_domains?value=False%20Positive HTTP/1.1" 200 -
+[2022-08-16 11:44:43,773] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:44:43] "GET /possible_phishing_domains?value=All HTTP/1.1" 200 -
+[2022-08-16 11:44:56,331] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:44:56] "GET /possible_phishing_domains?value=All HTTP/1.1" 200 -
+[2022-08-16 11:46:28,063] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/controllers/home_controller.py', reloading
+[2022-08-16 11:46:28,134] INFO _log:  * Restarting with stat
+[2022-08-16 11:46:30,583] INFO create_app: App started.
+[2022-08-16 11:46:30,613] WARNING _log:  * Debugger is active!
+[2022-08-16 11:46:30,628] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 11:46:31,708] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:46:31] "GET / HTTP/1.1" 200 -
+[2022-08-16 11:46:32,181] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:46:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-16 11:46:33,201] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:46:33] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 11:46:35,261] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:46:35] "GET /possible_phishing_domains?value=FalsePositive HTTP/1.1" 200 -
+[2022-08-16 11:47:01,194] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:47:01] "GET /possible_phishing_domains?value=FalsePositive HTTP/1.1" 200 -
+[2022-08-16 11:47:09,268] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:47:09] "GET /possible_phishing_domains?value=All HTTP/1.1" 200 -
+[2022-08-16 11:47:15,088] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:47:15] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-16 11:47:17,219] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:47:17] "GET /possible_phishing_domains?value=All HTTP/1.1" 200 -
+[2022-08-16 11:47:50,815] INFO _log: 127.0.0.1 - - [16/Aug/2022 11:47:50] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-16 13:43:50,589] INFO _log: 127.0.0.1 - - [16/Aug/2022 13:43:50] "GET / HTTP/1.1" 200 -
+[2022-08-16 13:43:50,943] INFO _log: 127.0.0.1 - - [16/Aug/2022 13:43:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-16 13:43:52,158] INFO _log: 127.0.0.1 - - [16/Aug/2022 13:43:52] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 13:43:55,465] INFO _log: 127.0.0.1 - - [16/Aug/2022 13:43:55] "GET /possible_phishing_domains?value=All HTTP/1.1" 200 -
+[2022-08-16 13:43:57,000] INFO _log: 127.0.0.1 - - [16/Aug/2022 13:43:57] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-16 13:44:01,388] INFO _log: 127.0.0.1 - - [16/Aug/2022 13:44:01] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
+[2022-08-16 13:51:54,825] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/daemons/dns_record_check.py', reloading
+[2022-08-16 13:51:55,025] INFO _log:  * Restarting with stat
+[2022-08-16 13:51:55,869] INFO create_app: App started.
+[2022-08-16 13:51:55,877] WARNING _log:  * Debugger is active!
+[2022-08-16 13:51:55,889] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 13:52:06,109] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/daemons/dns_record_check.py', reloading
+[2022-08-16 13:52:06,184] INFO _log:  * Restarting with stat
+[2022-08-16 13:52:07,038] INFO create_app: App started.
+[2022-08-16 13:52:07,045] WARNING _log:  * Debugger is active!
+[2022-08-16 13:52:07,052] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 13:54:25,081] INFO _log: 127.0.0.1 - - [16/Aug/2022 13:54:25] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
+[2022-08-16 13:54:28,830] INFO _log: 127.0.0.1 - - [16/Aug/2022 13:54:28] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -

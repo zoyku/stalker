@@ -53,7 +53,7 @@ def possible_phishing_domains():
 
     if value == "Approved":
         possible_phishings = PossiblePhishing.query.filter_by(is_approved=True).all()
-    elif value == "False Positive":
+    elif value == "FalsePositive":
         possible_phishings = PossiblePhishing.query.filter_by(is_approved=False).all()
     elif value == "Undetermined":
         possible_phishings = PossiblePhishing.query.filter_by(is_approved=None).all()

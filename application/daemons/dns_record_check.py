@@ -2,6 +2,8 @@ import dns
 import dns.resolver
 import logging
 
+from dns.exception import DNSException
+
 logging.basicConfig(filename='../logs/phishing_detector.log', format="%(asctime)s %(levelname)s %(funcName)s: %("
                                                                      "message)s", level=logging.INFO)
 
@@ -12,8 +14,8 @@ def dns_a_lookup(domain):
 
     try:
         dnsA = dns.resolver.resolve(domain, 'A')
-    except Exception as e:
-        logging.error(e)
+    except DNSException:
+        pass
     else:
         for data in dnsA:
             dns_a_check += [str(data)]
@@ -30,8 +32,8 @@ def dns_ns_lookup(domain):
 
     try:
         dnsNS = dns.resolver.resolve(domain, 'NS')
-    except Exception as e:
-        logging.error(e)
+    except DNSException:
+        pass
     else:
         for data in dnsNS:
             dns_ns_check += [str(data)]
@@ -48,8 +50,8 @@ def dns_mx_lookup(domain):
 
     try:
         dnsMX = dns.resolver.resolve(domain, 'A')
-    except Exception as e:
-        logging.error(e)
+    except DNSException:
+        pass
     else:
         for data in dnsMX:
             dns_mx_check += [str(data)]

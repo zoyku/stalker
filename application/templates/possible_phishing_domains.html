@@ -4,13 +4,14 @@
 {% endblock %}
 
 {% block content %}
-<h1 style="text-align: center; padding: 10px 0">Possible Phishing Domains</h1>
+<h1 id="head1" style="text-align: center; padding: 10px 0">Possible Phishing Domains</h1>
 
     <select style="padding: 5px 5px; margin-bottom: 10px; font-size: 18px; background-color: #212121; color: aliceblue; border-radius:5px" id="domain-types" onchange="change_domain_types()">
-        <option style="background-color: #212121; color: aliceblue" id="All" value="All">Choose domain status</option>
+        <option style="background-color: #212121; color: aliceblue" id="first" value="first">Choose domain status</option>
+        <option style="background-color: #212121; color: aliceblue" id="All" value="All">All Domains</option>
         <option style="background-color: #212121; color: aliceblue" id="Undetermined" value="Undetermined">Possible Phishing Domains</option>
         <option style="background-color: #212121; color: aliceblue" id="Approved" value="Approved">Approved</option>
-        <option style="background-color: #212121; color: aliceblue" id="False Positive" value="False Positive">False Positive</option>
+        <option style="background-color: #212121; color: aliceblue" id="False Positive" value="FalsePositive">False Positive</option>
     </select>
 
 
@@ -24,7 +25,7 @@
                 <th scope="col">Insert Date</th>
                 <th scope="col">Update Date</th>
                 <th scope="col" style="text-align: center">False Positive</th>
-                <th scope="col" style="text-align: center">Approved</th>
+                <th scope="col" style="text-align: center">Approve</th>
             </tr>
         </thead>
         <tbody id="table-content">
