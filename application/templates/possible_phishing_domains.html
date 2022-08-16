@@ -24,6 +24,10 @@
                 <th scope="col">Keyword</th>
                 <th scope="col">Insert Date</th>
                 <th scope="col">Update Date</th>
+                <th scope="col">Whois Record</th>
+                <th scope="col">DNS A Record</th>
+                <th scope="col">DNS NS Record</th>
+                <th scope="col">DNS MX Record</th>
                 <th scope="col" style="text-align: center">False Positive</th>
                 <th scope="col" style="text-align: center">Approve</th>
             </tr>
@@ -37,6 +41,22 @@
                     <td>{{ possible_phishing.from_which_keyword}}</td>
                     <td>{{ possible_phishing.insert_date}}</td>
                     <td>{{ possible_phishing.update_date}}</td>
+                    <td>{{ possible_phishing.whois_record['registrar']}}</td>
+                    <td>{% if possible_phishing.dns_a_record == "null" %}
+                            Not available
+                        {% else %}
+                            {{ possible_phishing.dns_a_record}}
+                        {% endif %}</td>
+                    <td>{% if possible_phishing.dns_ns_record == "null" %}
+                            Not available
+                        {% else %}
+                            {{ possible_phishing.dns_ns_record}}
+                        {% endif %}</td>
+                    <td>{% if possible_phishing.dns_mx_record == "null" %}
+                            Not available
+                        {% else %}
+                            {{ possible_phishing.dns_mx_record}}
+                        {% endif %}</td>
                     <td style="text-align: center"><button onclick="change_status('{{ possible_phishing.possible_phishing_domain }}', 'false_positive')"
                                                            style="background-color:red; padding: 10px 10px; color: white; border-radius: 8px;"
                                                            type="button"><i class="fa-solid fa-square-xmark"></i></button></td>
@@ -58,6 +78,25 @@
         function change_status(phishing_domain, status){
             window.location.href = '{{ url_for('pages.possible_phishing_domains') }}' + `?phishing_domain=${phishing_domain}&status=${status}`;
         }
+
+        $( document ).ready(function() {
+            console.log( "document loaded" );
+            const queryString = window.location.search;
+            const urlParam = new URLSearchParams(queryString);
+            const value = urlParam.get('value');
+            if (value === "All"){
+                document.getElementById("head1").innerHTML = "All Phishing Domains";
+            }
+            if (value === "Undetermined"){
+                document.getElementById("head1").innerHTML = "All Possible Phishing Domains";
+            }
+            if (value === "Approved"){
+                document.getElementById("head1").innerHTML = "Approved Phishing Domains";
+            }
+            if (value === "FalsePositive"){
+                document.getElementById("head1").innerHTML = "False Positive Phishing Domains";
+            }
+        });
     </script>
       
 {% endblock %}

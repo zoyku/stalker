@@ -487,3 +487,409 @@
 [2022-08-16 13:52:07,052] INFO _log:  * Debugger PIN: 122-885-574
 [2022-08-16 13:54:25,081] INFO _log: 127.0.0.1 - - [16/Aug/2022 13:54:25] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
 [2022-08-16 13:54:28,830] INFO _log: 127.0.0.1 - - [16/Aug/2022 13:54:28] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-16 14:04:22,757] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:04:22] "GET /possible_phishing_domains?phishing_domain=amazon1.com&status=false_positive HTTP/1.1" 200 -
+[2022-08-16 14:04:35,579] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:04:35] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-16 14:04:39,203] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:04:39] "GET /possible_phishing_domains?phishing_domain=amazozn.ca&status=approved HTTP/1.1" 200 -
+[2022-08-16 14:04:43,335] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:04:43] "GET /possible_phishing_domains?phishing_domain=agmazon.com&status=approved HTTP/1.1" 200 -
+[2022-08-16 14:04:44,470] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:04:44] "GET /possible_phishing_domains?phishing_domain=amazozn.com&status=false_positive HTTP/1.1" 200 -
+[2022-08-16 14:04:56,796] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:04:56] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-16 14:05:36,370] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:05:36] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-16 14:06:08,070] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:06:08] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-16 14:16:58,154] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:16:58] "GET /register HTTP/1.1" 200 -
+[2022-08-16 14:16:59,822] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:16:59] "GET /user HTTP/1.1" 200 -
+[2022-08-16 14:17:07,780] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:17:07] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-16 14:18:15,985] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:18:15] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-16 14:18:16,949] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:18:16] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 14:20:37,008] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:20:37] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
+[2022-08-16 14:24:06,384] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:24:06] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
+[2022-08-16 14:24:47,226] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:24:47] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
+[2022-08-16 14:25:29,818] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:25:29] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
+[2022-08-16 14:27:33,950] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:27:33] "GET /register HTTP/1.1" 200 -
+[2022-08-16 14:30:51,563] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:30:51] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 14:40:39,419] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/controllers/home_controller.py', reloading
+[2022-08-16 14:40:39,536] INFO _log:  * Restarting with stat
+[2022-08-16 14:40:41,564] INFO create_app: App started.
+[2022-08-16 14:40:41,601] WARNING _log:  * Debugger is active!
+[2022-08-16 14:40:41,835] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 14:41:35,100] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/daemons/phishing_detector.py', reloading
+[2022-08-16 14:41:35,174] INFO _log:  * Restarting with stat
+[2022-08-16 14:41:35,761] INFO create_app: App started.
+[2022-08-16 14:41:35,767] WARNING _log:  * Debugger is active!
+[2022-08-16 14:41:35,774] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 14:42:42,067] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/daemons/phishing_detector.py', reloading
+[2022-08-16 14:42:42,176] INFO _log:  * Restarting with stat
+[2022-08-16 14:42:42,838] INFO create_app: App started.
+[2022-08-16 14:42:42,844] WARNING _log:  * Debugger is active!
+[2022-08-16 14:42:42,850] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 14:46:07,902] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:46:07] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 14:46:23,577] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:46:23] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 14:47:02,474] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:47:02] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 14:48:06,100] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:48:06] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 14:48:33,051] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:48:33] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 14:51:37,130] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:51:37] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 14:51:39,900] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:51:39] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 14:52:09,773] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:52:09] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 14:52:10,822] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:52:10] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 14:52:11,364] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:52:11] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 14:52:13,253] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:52:13] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 14:52:34,903] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:52:34] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 14:52:57,366] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:52:57] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 14:53:41,712] INFO _log: 127.0.0.1 - - [16/Aug/2022 14:53:41] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 15:03:43,791] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:03:43] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 15:03:47,268] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:03:47] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-16 15:03:50,365] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:03:50] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
+[2022-08-16 15:03:59,755] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:03:59] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
+[2022-08-16 15:04:02,767] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:04:02] "GET /possible_phishing_domains?value=Undetermined HTTP/1.1" 200 -
+[2022-08-16 15:04:05,316] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:04:05] "GET /possible_phishing_domains?value=All HTTP/1.1" 200 -
+[2022-08-16 15:04:10,631] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:04:10] "GET /possible_phishing_domains?value=Approved HTTP/1.1" 200 -
+[2022-08-16 15:04:13,334] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:04:13] "GET /possible_phishing_domains?value=FalsePositive HTTP/1.1" 200 -
+[2022-08-16 15:07:35,726] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/models.py', reloading
+[2022-08-16 15:07:35,814] INFO _log:  * Restarting with stat
+[2022-08-16 15:07:37,842] INFO create_app: App started.
+[2022-08-16 15:07:37,878] WARNING _log:  * Debugger is active!
+[2022-08-16 15:07:37,895] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:10:23,650] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/forms.py', reloading
+[2022-08-16 15:10:23,742] INFO _log:  * Restarting with stat
+[2022-08-16 15:10:24,643] INFO create_app: App started.
+[2022-08-16 15:10:24,649] WARNING _log:  * Debugger is active!
+[2022-08-16 15:10:24,659] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:11:04,321] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/forms.py', reloading
+[2022-08-16 15:11:04,416] INFO _log:  * Restarting with stat
+[2022-08-16 15:11:05,177] INFO create_app: App started.
+[2022-08-16 15:11:05,191] WARNING _log:  * Debugger is active!
+[2022-08-16 15:11:05,203] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:14:14,854] INFO create_app: App started.
+[2022-08-16 15:14:17,571] INFO create_app: App started.
+[2022-08-16 15:14:44,132] INFO create_app: App started.
+[2022-08-16 15:15:04,736] INFO create_app: App started.
+[2022-08-16 15:16:37,567] INFO create_app: App started.
+[2022-08-16 15:16:37,575] INFO _log:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-08-16 15:16:37,576] INFO _log:  * Restarting with stat
+[2022-08-16 15:16:38,500] INFO create_app: App started.
+[2022-08-16 15:16:38,509] WARNING _log:  * Debugger is active!
+[2022-08-16 15:16:38,518] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:16:41,561] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:16:41] "GET /register HTTP/1.1" 200 -
+[2022-08-16 15:16:52,398] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:16:52] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:16:52,430] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:16:52] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:16:52,431] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:16:52] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:16:52,470] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:16:52] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:16:52,496] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:16:52] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:17:25,604] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:17:25] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:17:25,621] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:17:25] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:17:25,622] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:17:25] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:17:25,638] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:17:25] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:17:25,683] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:17:25] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:20:40,634] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/models.py', reloading
+[2022-08-16 15:20:40,709] INFO _log:  * Restarting with stat
+[2022-08-16 15:20:41,382] INFO create_app: App started.
+[2022-08-16 15:20:41,390] WARNING _log:  * Debugger is active!
+[2022-08-16 15:20:41,397] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:20:45,553] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:20:45] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:20:45,575] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:20:45] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:20:45,576] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:20:45] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:20:45,605] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:20:45] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:20:45,645] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:20:45] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:22:01,862] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/models.py', reloading
+[2022-08-16 15:22:01,969] INFO _log:  * Restarting with stat
+[2022-08-16 15:22:02,625] INFO create_app: App started.
+[2022-08-16 15:22:02,631] WARNING _log:  * Debugger is active!
+[2022-08-16 15:22:02,638] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:22:53,484] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/forms.py', reloading
+[2022-08-16 15:22:53,574] INFO _log:  * Restarting with stat
+[2022-08-16 15:22:54,358] INFO create_app: App started.
+[2022-08-16 15:22:54,365] WARNING _log:  * Debugger is active!
+[2022-08-16 15:22:54,372] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:22:58,717] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:22:58] "[35m[1mGET /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:22:58,743] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:22:58] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:22:58,744] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:22:58] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:22:58,757] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:22:58] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:22:58,782] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:22:58] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:23:32,046] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/forms.py', reloading
+[2022-08-16 15:23:32,136] INFO _log:  * Restarting with stat
+[2022-08-16 15:23:33,306] INFO create_app: App started.
+[2022-08-16 15:23:33,312] WARNING _log:  * Debugger is active!
+[2022-08-16 15:23:33,319] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:23:33,357] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:23:33] "GET /register HTTP/1.1" 200 -
+[2022-08-16 15:23:44,176] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:23:44] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:23:44,205] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:23:44] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:23:44,206] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:23:44] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:23:44,227] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:23:44] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:23:44,272] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:23:44] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:25:58,799] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/forms.py', reloading
+[2022-08-16 15:25:58,901] INFO _log:  * Restarting with stat
+[2022-08-16 15:25:59,531] INFO create_app: App started.
+[2022-08-16 15:25:59,538] WARNING _log:  * Debugger is active!
+[2022-08-16 15:25:59,547] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:26:04,617] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:26:04] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:26:04,638] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:26:04] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:26:04,644] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:26:04] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:26:04,660] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:26:04] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:26:04,699] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:26:04] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:27:42,050] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:27:42] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:27:42,070] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:27:42] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:27:42,071] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:27:42] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:27:42,088] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:27:42] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:27:42,134] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:27:42] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:28:23,768] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:28:23] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:28:23,787] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:28:23] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:28:23,788] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:28:23] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:28:23,808] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:28:23] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:28:23,857] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:28:23] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:33:08,321] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:33:08] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:33:08,338] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:33:08] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:33:08,339] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:33:08] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:33:08,358] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:33:08] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:33:08,404] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:33:08] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:34:31,057] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/controllers/home_controller.py', reloading
+[2022-08-16 15:34:31,149] INFO _log:  * Restarting with stat
+[2022-08-16 15:34:31,975] INFO create_app: App started.
+[2022-08-16 15:34:31,985] WARNING _log:  * Debugger is active!
+[2022-08-16 15:34:32,001] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:34:40,389] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:34:40] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:34:40,422] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:34:40] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:34:40,423] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:34:40] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:34:40,435] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:34:40] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:34:40,468] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:34:40] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:35:04,542] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/forms.py', reloading
+[2022-08-16 15:35:04,610] INFO _log:  * Restarting with stat
+[2022-08-16 15:35:05,194] INFO create_app: App started.
+[2022-08-16 15:35:05,201] WARNING _log:  * Debugger is active!
+[2022-08-16 15:35:05,210] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:35:06,433] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:35:06] "POST /register HTTP/1.1" 200 -
+[2022-08-16 15:35:10,529] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:35:10] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:35:10,550] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:35:10] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:35:10,555] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:35:10] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:35:10,567] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:35:10] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:35:10,595] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:35:10] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:36:18,470] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/forms.py', reloading
+[2022-08-16 15:36:18,605] INFO _log:  * Restarting with stat
+[2022-08-16 15:36:19,194] INFO create_app: App started.
+[2022-08-16 15:36:19,200] WARNING _log:  * Debugger is active!
+[2022-08-16 15:36:19,208] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:36:20,893] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:36:20] "POST /register HTTP/1.1" 200 -
+[2022-08-16 15:36:28,394] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:36:28] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:36:28,416] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:36:28] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:36:28,417] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:36:28] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:36:28,429] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:36:28] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:36:28,456] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:36:28] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:37:07,061] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/forms.py', reloading
+[2022-08-16 15:37:07,144] INFO _log:  * Restarting with stat
+[2022-08-16 15:37:07,840] INFO create_app: App started.
+[2022-08-16 15:37:07,846] WARNING _log:  * Debugger is active!
+[2022-08-16 15:37:07,853] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:37:07,972] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:37:07] "POST /register HTTP/1.1" 200 -
+[2022-08-16 15:37:11,762] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:37:11] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:37:11,780] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:37:11] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:37:11,785] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:37:11] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:37:11,798] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:37:11] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:37:11,826] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:37:11] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:37:29,940] INFO create_app: App started.
+[2022-08-16 15:37:32,124] INFO create_app: App started.
+[2022-08-16 15:37:36,770] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:37:36] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:37:36,785] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:37:36] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:37:36,787] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:37:36] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:37:36,806] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:37:36] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:37:36,840] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:37:36] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:37:45,371] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:37:45] "GET /register HTTP/1.1" 200 -
+[2022-08-16 15:37:46,957] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:37:46] "GET /register HTTP/1.1" 200 -
+[2022-08-16 15:37:53,854] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:37:53] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:37:53,870] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:37:53] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:37:53,871] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:37:53] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:37:53,883] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:37:53] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:37:53,925] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:37:53] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:38:32,360] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/utils/home_utils.py', reloading
+[2022-08-16 15:38:32,434] INFO _log:  * Restarting with stat
+[2022-08-16 15:38:33,090] INFO create_app: App started.
+[2022-08-16 15:38:33,099] WARNING _log:  * Debugger is active!
+[2022-08-16 15:38:33,107] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:38:40,748] INFO create_app: App started.
+[2022-08-16 15:38:40,756] INFO _log:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-08-16 15:38:40,758] INFO _log:  * Restarting with stat
+[2022-08-16 15:38:41,420] INFO create_app: App started.
+[2022-08-16 15:38:41,426] WARNING _log:  * Debugger is active!
+[2022-08-16 15:38:41,433] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:38:43,870] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:38:43] "GET / HTTP/1.1" 200 -
+[2022-08-16 15:38:47,975] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:38:47] "GET /register HTTP/1.1" 200 -
+[2022-08-16 15:38:55,646] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:38:55] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:38:55,666] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:38:55] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:38:55,670] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:38:55] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:38:55,679] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:38:55] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:38:55,716] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:38:55] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:40:57,825] INFO create_app: App started.
+[2022-08-16 15:40:57,834] INFO _log:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-08-16 15:40:57,835] INFO _log:  * Restarting with stat
+[2022-08-16 15:40:58,460] INFO create_app: App started.
+[2022-08-16 15:40:58,467] WARNING _log:  * Debugger is active!
+[2022-08-16 15:40:58,478] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:41:01,571] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:41:01] "GET / HTTP/1.1" 200 -
+[2022-08-16 15:41:02,656] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:41:02] "GET /register HTTP/1.1" 200 -
+[2022-08-16 15:41:09,179] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:41:09] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:41:09,199] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:41:09] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:41:09,204] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:41:09] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:41:09,216] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:41:09] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:41:09,244] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:41:09] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:42:00,577] INFO create_app: App started.
+[2022-08-16 15:42:00,589] INFO _log:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-08-16 15:42:00,592] INFO _log:  * Restarting with stat
+[2022-08-16 15:42:01,923] INFO create_app: App started.
+[2022-08-16 15:42:01,933] WARNING _log:  * Debugger is active!
+[2022-08-16 15:42:01,944] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:43:10,019] INFO create_app: App started.
+[2022-08-16 15:43:13,220] INFO create_app: App started.
+[2022-08-16 15:43:28,341] INFO create_app: App started.
+[2022-08-16 15:43:28,354] INFO _log:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-08-16 15:43:28,355] INFO _log:  * Restarting with stat
+[2022-08-16 15:43:29,074] INFO create_app: App started.
+[2022-08-16 15:43:29,081] WARNING _log:  * Debugger is active!
+[2022-08-16 15:43:29,088] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:43:29,725] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:43:29] "POST /register HTTP/1.1" 200 -
+[2022-08-16 15:43:33,621] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:43:33] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:43:33,639] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:43:33] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:43:33,640] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:43:33] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:43:33,654] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:43:33] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:43:33,682] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:43:33] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:45:15,922] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/utils/home_utils.py', reloading
+[2022-08-16 15:45:16,007] INFO _log:  * Restarting with stat
+[2022-08-16 15:45:16,762] INFO create_app: App started.
+[2022-08-16 15:45:16,769] WARNING _log:  * Debugger is active!
+[2022-08-16 15:45:16,778] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:45:36,247] INFO create_app: App started.
+[2022-08-16 15:45:36,255] INFO _log:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-08-16 15:45:36,256] INFO _log:  * Restarting with stat
+[2022-08-16 15:45:36,949] INFO create_app: App started.
+[2022-08-16 15:45:36,956] WARNING _log:  * Debugger is active!
+[2022-08-16 15:45:36,967] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:45:39,887] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:45:39] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:45:39,911] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:45:39] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:45:39,912] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:45:39] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:45:39,930] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:45:39] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:45:39,953] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:45:39] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:46:05,557] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/utils/home_utils.py', reloading
+[2022-08-16 15:46:05,625] INFO _log:  * Restarting with stat
+[2022-08-16 15:46:06,211] INFO create_app: App started.
+[2022-08-16 15:46:06,217] WARNING _log:  * Debugger is active!
+[2022-08-16 15:46:06,224] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:46:07,252] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:46:07] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:46:07,280] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:46:07] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:46:07,281] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:46:07] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:46:07,293] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:46:07] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:46:07,319] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:46:07] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:46:39,953] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/utils/home_utils.py', reloading
+[2022-08-16 15:46:40,089] INFO _log:  * Restarting with stat
+[2022-08-16 15:46:40,907] INFO create_app: App started.
+[2022-08-16 15:46:40,913] WARNING _log:  * Debugger is active!
+[2022-08-16 15:46:40,920] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:46:41,301] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:46:41] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:46:41,325] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:46:41] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:46:41,325] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:46:41] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:46:41,336] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:46:41] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:46:41,359] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:46:41] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:47:08,239] INFO create_app: App started.
+[2022-08-16 15:47:08,249] INFO _log:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-08-16 15:47:08,251] INFO _log:  * Restarting with stat
+[2022-08-16 15:47:08,882] INFO create_app: App started.
+[2022-08-16 15:47:08,888] WARNING _log:  * Debugger is active!
+[2022-08-16 15:47:08,894] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:47:09,135] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:47:09] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:47:09,158] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:47:09] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:47:09,159] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:47:09] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:47:09,168] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:47:09] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:47:09,186] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:47:09] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:47:50,667] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/utils/home_utils.py', reloading
+[2022-08-16 15:47:50,733] INFO _log:  * Restarting with stat
+[2022-08-16 15:47:51,475] INFO create_app: App started.
+[2022-08-16 15:47:51,483] WARNING _log:  * Debugger is active!
+[2022-08-16 15:47:51,491] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:48:19,039] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/utils/home_utils.py', reloading
+[2022-08-16 15:48:19,113] INFO _log:  * Restarting with stat
+[2022-08-16 15:48:19,909] INFO create_app: App started.
+[2022-08-16 15:48:19,916] WARNING _log:  * Debugger is active!
+[2022-08-16 15:48:19,925] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:48:21,784] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:48:21] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:48:21,809] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:48:21] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:48:21,809] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:48:21] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:48:21,823] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:48:21] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:48:21,856] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:48:21] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:48:56,616] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/utils/home_utils.py', reloading
+[2022-08-16 15:48:56,753] INFO _log:  * Restarting with stat
+[2022-08-16 15:48:57,597] INFO create_app: App started.
+[2022-08-16 15:48:57,605] WARNING _log:  * Debugger is active!
+[2022-08-16 15:48:57,611] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:48:57,943] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:48:57] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:48:57,962] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:48:57] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:48:57,967] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:48:57] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:48:57,977] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:48:57] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:48:58,005] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:48:58] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:49:32,210] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/utils/home_utils.py', reloading
+[2022-08-16 15:49:32,293] INFO _log:  * Restarting with stat
+[2022-08-16 15:49:32,899] INFO create_app: App started.
+[2022-08-16 15:49:32,906] WARNING _log:  * Debugger is active!
+[2022-08-16 15:49:32,912] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:49:32,990] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:49:32] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:49:33,013] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:49:33] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:49:33,014] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:49:33] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:49:33,025] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:49:33] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:49:33,049] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:49:33] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:50:08,583] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/controllers/home_controller.py', reloading
+[2022-08-16 15:50:08,689] INFO _log:  * Restarting with stat
+[2022-08-16 15:50:09,298] INFO create_app: App started.
+[2022-08-16 15:50:09,305] WARNING _log:  * Debugger is active!
+[2022-08-16 15:50:09,311] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:50:09,388] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:50:09] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:50:09,407] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:50:09] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:50:09,411] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:50:09] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:50:09,421] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:50:09] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:50:09,448] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:50:09] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:54:10,886] INFO create_app: App started.
+[2022-08-16 15:54:10,902] INFO _log:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-08-16 15:54:10,903] INFO _log:  * Restarting with stat
+[2022-08-16 15:54:11,685] INFO create_app: App started.
+[2022-08-16 15:54:11,691] WARNING _log:  * Debugger is active!
+[2022-08-16 15:54:11,698] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 15:54:12,802] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:54:12] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+[2022-08-16 15:54:12,828] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:54:12] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2022-08-16 15:54:12,831] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:54:12] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2022-08-16 15:54:12,845] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:54:12] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:54:12,884] INFO _log: 127.0.0.1 - - [16/Aug/2022 15:54:12] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2022-08-16 15:59:42,998] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/models.py', reloading
+[2022-08-16 15:59:43,091] INFO _log:  * Restarting with stat
+[2022-08-16 16:00:09,570] INFO create_app: App started.
+[2022-08-16 16:00:14,209] INFO create_app: App started.
+[2022-08-16 16:00:34,703] INFO create_app: App started.
+[2022-08-16 16:00:34,745] INFO _log:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-08-16 16:00:34,749] INFO _log:  * Restarting with stat
+[2022-08-16 16:00:35,426] INFO create_app: App started.
+[2022-08-16 16:00:35,434] WARNING _log:  * Debugger is active!
+[2022-08-16 16:00:35,440] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 16:00:35,765] ERROR __page_wrong_request: Same username and keyword.
+[2022-08-16 16:00:35,788] INFO _log: 127.0.0.1 - - [16/Aug/2022 16:00:35] "[31m[1mPOST /register HTTP/1.1[0m" 400 -
+[2022-08-16 16:00:37,269] INFO _log: 127.0.0.1 - - [16/Aug/2022 16:00:37] "GET /user HTTP/1.1" 200 -
+[2022-08-16 16:02:58,802] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/utils/home_utils.py', reloading
+[2022-08-16 16:02:58,957] INFO _log:  * Restarting with stat
+[2022-08-16 16:02:59,671] INFO create_app: App started.
+[2022-08-16 16:02:59,682] WARNING _log:  * Debugger is active!
+[2022-08-16 16:02:59,690] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 16:03:22,013] INFO _log: 127.0.0.1 - - [16/Aug/2022 16:03:22] "GET /register HTTP/1.1" 200 -
+[2022-08-16 16:03:46,568] INFO _log:  * Detected change in '/Users/socradar/PycharmProjects/stalker/application/utils/words_utils.py', reloading
+[2022-08-16 16:03:46,666] INFO _log:  * Restarting with stat
+[2022-08-16 16:03:47,321] INFO create_app: App started.
+[2022-08-16 16:03:47,327] WARNING _log:  * Debugger is active!
+[2022-08-16 16:03:47,334] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-16 16:03:50,964] INFO _log: 127.0.0.1 - - [16/Aug/2022 16:03:50] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 16:03:52,321] INFO _log: 127.0.0.1 - - [16/Aug/2022 16:03:52] "GET /register HTTP/1.1" 200 -
+[2022-08-16 16:03:54,237] INFO _log: 127.0.0.1 - - [16/Aug/2022 16:03:54] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 16:03:56,716] INFO _log: 127.0.0.1 - - [16/Aug/2022 16:03:56] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 16:05:36,114] INFO _log: 127.0.0.1 - - [16/Aug/2022 16:05:36] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-16 16:07:07,466] INFO _log: 127.0.0.1 - - [16/Aug/2022 16:07:07] "GET /register HTTP/1.1" 200 -
+[2022-08-16 16:07:08,767] INFO _log: 127.0.0.1 - - [16/Aug/2022 16:07:08] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-16 16:07:11,047] INFO _log: 127.0.0.1 - - [16/Aug/2022 16:07:11] "GET /user HTTP/1.1" 200 -
+[2022-08-16 16:07:12,060] INFO _log: 127.0.0.1 - - [16/Aug/2022 16:07:12] "GET /register HTTP/1.1" 200 -
+[2022-08-16 16:07:16,075] INFO _log: 127.0.0.1 - - [16/Aug/2022 16:07:16] "GET /user HTTP/1.1" 200 -
+[2022-08-16 16:07:22,613] INFO _log: 127.0.0.1 - - [16/Aug/2022 16:07:22] "GET /user HTTP/1.1" 200 -
+[2022-08-16 16:07:23,013] INFO _log: 127.0.0.1 - - [16/Aug/2022 16:07:23] "GET /register HTTP/1.1" 200 -
+[2022-08-16 16:07:28,569] INFO _log: 127.0.0.1 - - [16/Aug/2022 16:07:28] "[32mPOST /register HTTP/1.1[0m" 302 -
+[2022-08-16 16:07:28,574] INFO _log: 127.0.0.1 - - [16/Aug/2022 16:07:28] "GET /user HTTP/1.1" 200 -
+[2022-08-16 16:07:30,041] INFO _log: 127.0.0.1 - - [16/Aug/2022 16:07:30] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-16 16:07:46,484] INFO _log: 127.0.0.1 - - [16/Aug/2022 16:07:46] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 16:07:48,280] INFO _log: 127.0.0.1 - - [16/Aug/2022 16:07:48] "GET /possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-16 16:09:55,385] INFO _log: 127.0.0.1 - - [16/Aug/2022 16:09:55] "GET /possible_phishing_domains HTTP/1.1" 200 -

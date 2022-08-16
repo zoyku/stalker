@@ -1,14 +1,15 @@
 import datetime
 import json
-from datetime import datetime
 import time
 import whois
 import logging
+import dns
+import dns.resolver
 
 from whois.parser import PywhoisError
+from dns.exception import DNSException
 
 from application import create_app, db
-from application.daemons.dns_record_check import dns_a_lookup, dns_ns_lookup, dns_mx_lookup
 from application.models import User, KeywordTypo, PossiblePhishing
 from application.utils.core_utils import CoreUtils
 from application.utils.words_utils import WordUtils
@@ -70,6 +71,60 @@ def domain_info_to_dict(domain_info):
     return domain_info_changed
 
 
+def dns_a_lookup(domain):
+    # logging.info(domain)
+    dns_a_check = []
+
+    try:
+        dnsA = dns.resolver.resolve(domain, 'A')
+    except DNSException:
+        pass
+    else:
+        for data in dnsA:
+            dns_a_check += [str(data)]
+
+    if not dns_a_check:
+        return None
+    else:
+        return dns_a_check
+
+
+def dns_ns_lookup(domain):
+    # logging.info(domain)
+    dns_ns_check = []
+
+    try:
+        dnsNS = dns.resolver.resolve(domain, 'NS')
+    except DNSException:
+        pass
+    else:
+        for data in dnsNS:
+            dns_ns_check += [str(data)]
+
+    if not dns_ns_check:
+        return None
+    else:
+        return dns_ns_check
+
+
+def dns_mx_lookup(domain):
+    # logging.info(domain)
+    dns_mx_check = []
+
+    try:
+        dnsMX = dns.resolver.resolve(domain, 'A')
+    except DNSException:
+        pass
+    else:
+        for data in dnsMX:
+            dns_mx_check += [str(data)]
+
+    if not dns_mx_check:
+        return None
+    else:
+        return dns_mx_check
+
+
 def detect_phishings(total_number_of_daemons, daemon_number):
     app = create_app()
     with app.app_context():
@@ -98,8 +153,8 @@ def detect_phishings(total_number_of_daemons, daemon_number):
                                 dns_ns_check = dns_ns_lookup(checked_domain)
                                 dns_mx_check = dns_mx_lookup(checked_domain)
                                 phishing_domain = PossiblePhishing(possible_phishing_domain=checked_domain,
-                                                                   insert_date=datetime.utcnow(),
-                                                                   update_date=datetime.utcnow(),
+                                                                   insert_date=datetime.date.today(),
+                                                                   update_date=datetime.date.today(),
                                                                    from_which_keyword=user.keyword,
                                                                    user_id=user.id,
                                                                    register_name=user.register_name,
@@ -111,7 +166,7 @@ def detect_phishings(total_number_of_daemons, daemon_number):
                                                                    dns_mx_record=json.dumps(dns_mx_check))
                                 db.session.add(phishing_domain)
                                 db.session.commit()
-                                user.update_date = datetime.utcnow()
+                                user.update_date = datetime.date.today()
                                 db.session.commit()
                                 app.logger.info("Possible phishing domain added to the database. User is "
                                                 "updated.")

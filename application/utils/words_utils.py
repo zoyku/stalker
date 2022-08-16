@@ -7,11 +7,11 @@ class WordUtils:
         shopping_words = ['hediye', 'gift', 'bedava', 'firsat']
         personal_words = ['official']
 
-        if category.name == "Bank":
+        if category == "Bank":
             words += bank_words
-        elif category.name == "Shopping":
+        elif category == "Shopping":
             words += shopping_words
-        elif category.name == "Personal":
+        elif category == "Personal":
             words += personal_words
 
         return words

@@ -1,12 +1,10 @@
-import json
-
-from flask import render_template, request, make_response, jsonify
-from application.models import User, KeywordTypo, PossiblePhishing
+from flask import request
+from application.models import User, PossiblePhishing
 from flask import render_template, redirect, url_for, flash
 from application.forms import RegisterForm
 from application.controller import mod_pages
 from application.utils.home_utils import HomeUtils
-from application.daemons.changing_status import ChangeStatus
+from application.utils.changing_status import ChangeStatus
 
 
 @mod_pages.route('/')
@@ -19,7 +17,7 @@ def home_page():
 def register():
     form = RegisterForm()
     if form.validate_on_submit():
-        HomeUtils.create_user_and_keyword(form.keyword.data, form.username.data, form.category)
+        HomeUtils.create_user_and_keyword(form.keyword.data, form.username.data, form.domain.data, form.category.data)
         return redirect(url_for('pages.user'))
 
     if form.errors != {}:
