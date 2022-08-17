@@ -1,11 +1,11 @@
 import json
 import logging
-from bs4 import BeautifulSoup
 
 import requests
+from bs4 import BeautifulSoup
 
 from application import create_app, db
-from application.models import User, PossiblePhishing, PhishingPageContent
+from application.models import PossiblePhishing, PhishingPageContent
 
 logging.basicConfig(filename='../logs/content_checker.log',
                     format="[%(asctime)s] %(levelname)s %(funcName)s: %(message)s",
@@ -19,18 +19,23 @@ def store_content(total_number_of_daemons, daemon_number):
         for phishing_domain in phishing_domains:
             control = PhishingPageContent.query.filter_by(domain=phishing_domain.possible_phishing_domain).first()
             if control is None:
+                app.logger.info("Checking for domain '%s' for user %s" % (phishing_domain.possible_phishing_domain,
+                                                                          phishing_domain.register_name))
                 phishing_web_page_content = None
                 try:
                     phishing_web_page_content = requests.get('https://' + phishing_domain.possible_phishing_domain)
+                    app.logger.info("Found https.")
                 except requests.exceptions.RequestException:
                     pass
 
                 try:
                     phishing_web_page_content = requests.get('http://' + phishing_domain.possible_phishing_domain)
+                    app.logger.info("Found http.")
                 except requests.exceptions.RequestException:
                     pass
 
                 if phishing_web_page_content is not None:
+                    app.logger.info("Found domain content.")
                     soup = BeautifulSoup(phishing_web_page_content.text, 'html.parser')
                     css_links = []
                     for link in soup.find_all('link'):
