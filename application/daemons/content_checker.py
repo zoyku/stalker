@@ -12,21 +12,21 @@ logging.basicConfig(filename='../logs/content_checker.log',
                     level=logging.INFO)
 
 
-def store_content(id):
+def store_content(total_number_of_daemons, daemon_number):
     app = create_app()
     with app.app_context():
-        users = User.query.filter_by(id=id).all()
-        for user in users:
-            phishing_domains = PossiblePhishing.query.filter_by(user_id=user.id).all()
-            for phishing_domain in phishing_domains:
+        phishing_domains = PossiblePhishing.query.filter(PossiblePhishing.id % total_number_of_daemons == daemon_number).all()
+        for phishing_domain in phishing_domains:
+            control = PhishingPageContent.query.filter_by(domain=phishing_domain.possible_phishing_domain).first()
+            if control is None:
                 phishing_web_page_content = None
                 try:
-                    phishing_web_page_content = requests.get('https://' + phishing_domain)
+                    phishing_web_page_content = requests.get('https://' + phishing_domain.possible_phishing_domain)
                 except requests.exceptions.RequestException:
                     pass
 
                 try:
-                    phishing_web_page_content = requests.get('http://' + phishing_domain)
+                    phishing_web_page_content = requests.get('http://' + phishing_domain.possible_phishing_domain)
                 except requests.exceptions.RequestException:
                     pass
 
@@ -35,18 +35,18 @@ def store_content(id):
                     css_links = []
                     for link in soup.find_all('link'):
                         css_links += [link.get('href')]
-                    new_phishing_page_content = PhishingPageContent(user_id=user.id,
-                                                                    register_name=user.register_name,
+                    new_phishing_page_content = PhishingPageContent(user_id=phishing_domain.user_id,
+                                                                    register_name=phishing_domain.register_name,
                                                                     domain=phishing_domain.possible_phishing_domain,
                                                                     content=phishing_web_page_content.text,
                                                                     response_code=phishing_web_page_content.status_code,
-                                                                    headers=phishing_web_page_content.headers,
+                                                                    headers=str(phishing_web_page_content.headers),
                                                                     css_links=json.dumps(css_links))
                     db.session.add(new_phishing_page_content)
                     db.session.commit()
                 else:
-                    new_phishing_page_content = PhishingPageContent(user_id=user.id,
-                                                                    register_name=user.register_name,
+                    new_phishing_page_content = PhishingPageContent(user_id=phishing_domain.user_id,
+                                                                    register_name=phishing_domain.register_name,
                                                                     domain=phishing_domain.possible_phishing_domain,
                                                                     content=None,
                                                                     response_code=0,
@@ -54,5 +54,14 @@ def store_content(id):
                                                                     css_links=None)
                     db.session.add(new_phishing_page_content)
                     db.session.commit()
+            else:
+                continue
     return 0
+
+
+if __name__ == '__main__':
+    total_number_of_daemons = 1
+    daemon_number = 0
+    store_content(total_number_of_daemons, daemon_number)
+
 

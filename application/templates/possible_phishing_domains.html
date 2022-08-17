@@ -1,17 +1,20 @@
 {% extends 'base.html' %}
-{% block title %}
-  Possible Phishing Domains Page
-{% endblock %}
 
 {% block content %}
-<h1 id="head1" style="text-align: center; padding: 10px 0">Possible Phishing Domains</h1>
+    <head>
+    </head>
+    <title>
+    Possible Phishing Domains Page
+    </title>
+
+    <h1 id="head1" style="text-align: center; padding: 10px 0">Possible Phishing Domains</h1>
 
     <select style="padding: 5px 5px; margin-bottom: 10px; font-size: 18px; background-color: #212121; color: aliceblue; border-radius:5px" id="domain-types" onchange="change_domain_types()">
-        <option style="background-color: #212121; color: aliceblue" id="first" value="first">Choose domain status</option>
-        <option style="background-color: #212121; color: aliceblue" id="All" value="All">All Domains</option>
+        <option style="background-color: #212121; color: aliceblue" id="Undetermined" value="Undetermined">Choose domain status</option>
         <option style="background-color: #212121; color: aliceblue" id="Undetermined" value="Undetermined">Possible Phishing Domains</option>
         <option style="background-color: #212121; color: aliceblue" id="Approved" value="Approved">Approved</option>
         <option style="background-color: #212121; color: aliceblue" id="False Positive" value="FalsePositive">False Positive</option>
+        <option style="background-color: #212121; color: aliceblue" id="All" value="All">All Domains</option>
     </select>
 
 
@@ -41,26 +44,30 @@
                     <td>{{ possible_phishing.from_which_keyword}}</td>
                     <td>{{ possible_phishing.insert_date}}</td>
                     <td>{{ possible_phishing.update_date}}</td>
-                    <td>{{ possible_phishing.whois_record['registrar']}}</td>
-                    <td>{% if possible_phishing.dns_a_record == "null" %}
+                    <td style="max-width: 400px" onclick="toggle_whois(this)">{{ possible_phishing.whois_record['registrar']}} <span style="display: none" > {{ possible_phishing.whois_record }}</span></td>
+                    <td style="max-width: 400px" onclick="toggle_whois(this)">{% if possible_phishing.dns_a_record == "null" %}
                             Not available
                         {% else %}
-                            {{ possible_phishing.dns_a_record}}
+                            {{ possible_phishing.dns_a_record | truncate(25)}}
+                            <span style="display: none" > {{ possible_phishing.dns_a_record }}</span>
                         {% endif %}</td>
-                    <td>{% if possible_phishing.dns_ns_record == "null" %}
+                    <td style="max-width: 400px" onclick="toggle_whois(this)">{% if possible_phishing.dns_ns_record == "null" %}
                             Not available
                         {% else %}
-                            {{ possible_phishing.dns_ns_record}}
+                            {{ possible_phishing.dns_ns_record | truncate(25)}}
+                            <span style="display: none" > {{ possible_phishing.dns_ns_record }}</span>
                         {% endif %}</td>
-                    <td>{% if possible_phishing.dns_mx_record == "null" %}
+                    <td style="max-width: 400px" onclick="toggle_whois(this)">{% if possible_phishing.dns_mx_record == "null" %}
                             Not available
                         {% else %}
-                            {{ possible_phishing.dns_mx_record}}
+                            {{ possible_phishing.dns_mx_record | truncate(25)}}
+                            <span style="display: none" > {{ possible_phishing.dns_mx_record }}</span>
                         {% endif %}</td>
-                    <td style="text-align: center"><button onclick="change_status('{{ possible_phishing.possible_phishing_domain }}', 'false_positive')"
+                    <td style="text-align: center"><button
+                            onclick="change_status(this, '{{ possible_phishing.possible_phishing_domain }}', 'false_positive')"
                                                            style="background-color:red; padding: 10px 10px; color: white; border-radius: 8px;"
                                                            type="button"><i class="fa-solid fa-square-xmark"></i></button></td>
-                    <td style="text-align: center"><button onclick="change_status('{{ possible_phishing.possible_phishing_domain }}', 'approved')"
+                    <td style="text-align: center"><button onclick="change_status(this, '{{ possible_phishing.possible_phishing_domain }}', 'approved')"
                                                            style="background-color:green; padding: 10px 10px; color: white; border-radius: 8px;"
                                                            type="button"><i class="fa-solid fa-circle-check"></i></button></td>
                 </tr>
@@ -75,11 +82,27 @@
             window.location.href = '{{ url_for('pages.possible_phishing_domains') }}' + `?value=${value}`;
         }
 
-        function change_status(phishing_domain, status){
-            window.location.href = '{{ url_for('pages.possible_phishing_domains') }}' + `?phishing_domain=${phishing_domain}&status=${status}`;
+        function toggle_whois(elem){
+            $(elem).find('span').toggle();
         }
 
-        $( document ).ready(function() {
+        function change_status(elem, phishing_domain, status){
+            $.ajax({
+                type: 'POST',
+                url: "{{ url_for('pages.change_phishing_domain_status') }}",
+                data: {"phishing_domain": phishing_domain,
+                        "status": status},
+
+                success: function (data) {
+                    debugger;
+                    if (data["Result"] == "OK"){
+                        change_domain_types();
+                    }
+                }
+            });
+        }
+
+        $(document).ready(function() {
             console.log( "document loaded" );
             const queryString = window.location.search;
             const urlParam = new URLSearchParams(queryString);
@@ -88,7 +111,7 @@
                 document.getElementById("head1").innerHTML = "All Phishing Domains";
             }
             if (value === "Undetermined"){
-                document.getElementById("head1").innerHTML = "All Possible Phishing Domains";
+                document.getElementById("head1").innerHTML = "Possible Phishing Domains";
             }
             if (value === "Approved"){
                 document.getElementById("head1").innerHTML = "Approved Phishing Domains";

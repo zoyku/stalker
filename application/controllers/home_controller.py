@@ -1,4 +1,4 @@
-from flask import request
+from flask import request, jsonify
 from application.models import User, PossiblePhishing
 from flask import render_template, redirect, url_for, flash
 from application.forms import RegisterForm
@@ -41,21 +41,27 @@ def keyword_typos():
     return render_template('keyword_typos.html', users=users)
 
 
-@mod_pages.route('/possible_phishing_domains')
+@mod_pages.route('/filtered_possible_phishing_domains')
 def possible_phishing_domains():
     value = request.args.get('value')
-    phishing_domain = request.args.get('phishing_domain')
-    status = request.args.get('status')
-
-    ChangeStatus.changing_status(phishing_domain, status)
 
     if value == "Approved":
         possible_phishings = PossiblePhishing.query.filter_by(is_approved=True).all()
     elif value == "FalsePositive":
         possible_phishings = PossiblePhishing.query.filter_by(is_approved=False).all()
-    elif value == "Undetermined":
-        possible_phishings = PossiblePhishing.query.filter_by(is_approved=None).all()
-    else:
+    elif value == "All":
         possible_phishings = PossiblePhishing.query.all()
+    else:
+        possible_phishings = PossiblePhishing.query.filter_by(is_approved=None).all()
 
     return render_template('possible_phishing_domains.html', possible_phishings=possible_phishings)
+
+
+@mod_pages.route('/change_phishing_domain_status', methods=["POST"])
+def change_phishing_domain_status():
+    phishing_domain = request.form.get('phishing_domain')
+    status = request.form.get('status')
+
+    ChangeStatus.changing_status(phishing_domain, status)
+
+    return jsonify({"Result": "OK"})

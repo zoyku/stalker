@@ -8,7 +8,7 @@ class User(db.Model):
     __tablename__ = 'user'
     id = db.Column(db.Integer(), primary_key=True)
     insert_date = db.Column(db.String(), nullable=False)
-    update_date = db.Column(db.String(), nullable=False, onupdate=datetime.datetime.utcnow())
+    update_date = db.Column(db.String(), nullable=False, onupdate=datetime.datetime.today())
     register_name = db.Column(db.String(length=30), nullable=False)
     keyword = db.Column(db.String(), nullable=False, unique=True)
     category = db.Column(db.String())
@@ -36,7 +36,7 @@ class PossiblePhishing(db.Model):
     user_id = db.Column(db.Integer(), db.ForeignKey('user.id'))
     from_which_keyword = db.Column(db.String())
     insert_date = db.Column(db.String(), nullable=False)
-    update_date = db.Column(db.String(), nullable=False, onupdate=datetime.datetime.utcnow())
+    update_date = db.Column(db.String(), nullable=False, onupdate=datetime.datetime.today())
     is_approved = db.Column(db.Boolean)
     is_false = db.Column(db.Boolean)
     whois_record = db.Column(db.JSON)

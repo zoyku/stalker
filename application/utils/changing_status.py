@@ -1,10 +1,10 @@
-from application.models import User, KeywordTypo, PossiblePhishing
-from application import create_app, db
+from application import db
+from application.models import PossiblePhishing
 
 
 class ChangeStatus:
     @staticmethod
-    def changing_status(phishing_domain,status):
+    def changing_status(phishing_domain, status):
         if status == 'false_positive':
             PossiblePhishing.query.filter_by(possible_phishing_domain=phishing_domain).first().is_approved = False
             db.session.commit()
