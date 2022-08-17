@@ -1,20 +1,11 @@
-import datetime
 import json
-import time
+import logging
+from bs4 import BeautifulSoup
 
 import requests
-import whois
-import logging
-import dns
-import dns.resolver
-
-from whois.parser import PywhoisError
-from dns.exception import DNSException
 
 from application import create_app, db
-from application.models import User, KeywordTypo, PossiblePhishing, PhishingPageContent
-from application.utils.core_utils import CoreUtils
-from application.utils.words_utils import WordUtils
+from application.models import User, PossiblePhishing, PhishingPageContent
 
 logging.basicConfig(filename='../logs/content_checker.log',
                     format="[%(asctime)s] %(levelname)s %(funcName)s: %(message)s",
@@ -40,18 +31,28 @@ def store_content(id):
                     pass
 
                 if phishing_web_page_content is not None:
+                    soup = BeautifulSoup(phishing_web_page_content.text, 'html.parser')
+                    css_links = []
+                    for link in soup.find_all('link'):
+                        css_links += [link.get('href')]
                     new_phishing_page_content = PhishingPageContent(user_id=user.id,
                                                                     register_name=user.register_name,
+                                                                    domain=phishing_domain.possible_phishing_domain,
                                                                     content=phishing_web_page_content.text,
                                                                     response_code=phishing_web_page_content.status_code,
-                                                                    headers=phishing_web_page_content.headers)
+                                                                    headers=phishing_web_page_content.headers,
+                                                                    css_links=json.dumps(css_links))
                     db.session.add(new_phishing_page_content)
                     db.session.commit()
                 else:
                     new_phishing_page_content = PhishingPageContent(user_id=user.id,
                                                                     register_name=user.register_name,
+                                                                    domain=phishing_domain.possible_phishing_domain,
                                                                     content=None,
-                                                                    response_code=0)
+                                                                    response_code=0,
+                                                                    headers=None,
+                                                                    css_links=None)
                     db.session.add(new_phishing_page_content)
                     db.session.commit()
     return 0
+

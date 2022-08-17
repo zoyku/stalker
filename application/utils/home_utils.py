@@ -1,12 +1,14 @@
+import json
 import requests
+import datetime
 
 from flask import abort
+from bs4 import BeautifulSoup
 
 from application import db
 from application.models import User, KeywordTypo, RealWebPageContent
 from application.models_module.app_models import BaseResponse
 from application.utils.typo_utils import TypoUtils
-import datetime
 
 
 class HomeUtils:
@@ -38,11 +40,17 @@ class HomeUtils:
             pass
 
         if user_web_page_content is not None:
+            soup = BeautifulSoup(user_web_page_content.text, 'html.parser')
+            css_links = []
+            for link in soup.find_all('link'):
+                css_links += [link.get('href')]
             new_web_page_content = RealWebPageContent(user_id=new_user.id,
                                                       register_name=new_user.register_name,
                                                       content=user_web_page_content.text,
+                                                      domain=new_user.domain,
                                                       response_code=user_web_page_content.status_code,
-                                                      headers=str(user_web_page_content.headers))
+                                                      headers=str(user_web_page_content.headers),
+                                                      css_links=json.dumps(css_links))
             db.session.add(new_web_page_content)
             db.session.commit()
         else:

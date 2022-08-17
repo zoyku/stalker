@@ -1,7 +1,7 @@
 class WordUtils:
     @staticmethod
     def get_words(category):
-        words = []
+        words = ['account', 'login']
 
         bank_words = ['bankasi', 'kolaybasvuru', 'bayramkredisi', 'faizyok']
         shopping_words = ['hediye', 'gift', 'bedava', 'firsat']

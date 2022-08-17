@@ -50,9 +50,12 @@ class RealWebPageContent(db.Model):
     id = db.Column(db.Integer(), primary_key=True)
     user_id = db.Column(db.Integer(), db.ForeignKey('user.id'))
     register_name = db.Column(db.String())
+    domain = db.Column(db.String())
     content = db.Column(db.TEXT)
     response_code = db.Column(db.Integer)
     headers = db.Column(db.String)
+    css_links = db.Column(db.JSON)
+
 
 
 class PhishingPageContent(db.Model):
@@ -60,7 +63,9 @@ class PhishingPageContent(db.Model):
     id = db.Column(db.Integer(), primary_key=True)
     user_id = db.Column(db.Integer(), db.ForeignKey('user.id'))
     register_name = db.Column(db.String())
+    domain = db.Column(db.String())
     content = db.Column(db.TEXT)
     response_code = db.Column(db.Integer)
     headers = db.Column(db.String)
+    css_links = db.Column(db.JSON)
 
