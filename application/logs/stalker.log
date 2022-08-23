@@ -1521,3 +1521,274 @@
 [2022-08-17 17:01:20,694] INFO create_app: App started.
 [2022-08-17 17:01:20,699] WARNING _log:  * Debugger is active!
 [2022-08-17 17:01:20,706] INFO _log:  * Debugger PIN: 122-885-574
+[2022-08-23 12:22:57,975] INFO create_app: App started.
+[2022-08-23 12:22:57,978] INFO _log:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-08-23 12:23:20,096] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:23:20] "GET / HTTP/1.1" 200 -
+[2022-08-23 12:23:21,341] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:23:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-23 12:23:23,270] ERROR log_exception: Exception on /keyword_typos [GET]
+Traceback (most recent call last):
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3280, in _wrap_pool_connect
+    return fn()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 590, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+sqlite3.OperationalError: unable to open database file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/zob/PycharmProjects/stalker/application/controllers/home_controller.py", line 39, in keyword_typos
+    users = User.query.all()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2768, in all
+    return self._iter().all()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2903, in _iter
+    result = self.session.execute(
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1711, in execute
+    conn = self._connection_for_bind(bind)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1552, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 747, in _connection_for_bind
+    conn = bind.connect()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3234, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3313, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3283, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2117, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3280, in _wrap_pool_connect
+    return fn()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 590, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2022-08-23 12:23:23,307] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:23:23] "[35m[1mGET /keyword_typos HTTP/1.1[0m" 500 -
+[2022-08-23 12:23:29,939] ERROR log_exception: Exception on /user [GET]
+Traceback (most recent call last):
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3280, in _wrap_pool_connect
+    return fn()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 590, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+sqlite3.OperationalError: unable to open database file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/zob/PycharmProjects/stalker/application/controllers/home_controller.py", line 32, in user
+    users = User.query.all()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2768, in all
+    return self._iter().all()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2903, in _iter
+    result = self.session.execute(
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1711, in execute
+    conn = self._connection_for_bind(bind)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1552, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 747, in _connection_for_bind
+    conn = bind.connect()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3234, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3313, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3283, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2117, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 3280, in _wrap_pool_connect
+    return fn()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 310, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 868, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 476, in checkout
+    rec = pool._do_get()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 256, in _create_connection
+    return _ConnectionRecord(self)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 371, in __init__
+    self.__connect()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 666, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/pool/base.py", line 661, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/create.py", line 590, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 597, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2022-08-23 12:23:29,941] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:23:29] "[35m[1mGET /user HTTP/1.1[0m" 500 -
+[2022-08-23 12:23:32,646] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:23:32] "GET /register HTTP/1.1" 200 -
+[2022-08-23 12:24:13,508] INFO create_app: App started.
+[2022-08-23 12:24:25,683] INFO create_app: App started.
+[2022-08-23 12:28:10,610] INFO create_app: App started.
+[2022-08-23 12:28:10,616] INFO _log:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-08-23 12:28:34,194] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:28:34] "GET / HTTP/1.1" 200 -
+[2022-08-23 12:28:36,079] ERROR log_exception: Exception on /keyword_typos [GET]
+Traceback (most recent call last):
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Users/zob/PycharmProjects/stalker/application/controllers/home_controller.py", line 39, in keyword_typos
+    users = User.query.all()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2768, in all
+    return self._iter().all()
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/orm/query.py", line 2903, in _iter
+    result = self.session.execute(
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 332, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/zob/PycharmProjects/stalker/venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id, user.insert_date AS user_insert_date, user.update_date AS user_update_date, user.register_name AS user_register_name, user.keyword AS user_keyword, user.category AS user_category, user.domain AS user_domain 
+FROM user]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2022-08-23 12:28:36,107] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:28:36] "[35m[1mGET /keyword_typos HTTP/1.1[0m" 500 -
+[2022-08-23 12:29:43,180] INFO create_app: App started.
+[2022-08-23 12:30:13,290] INFO create_app: App started.
+[2022-08-23 12:30:21,987] INFO create_app: App started.
+[2022-08-23 12:33:40,637] INFO create_app: App started.
+[2022-08-23 12:33:40,640] INFO _log:  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+[2022-08-23 12:33:53,744] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:33:53] "GET / HTTP/1.1" 200 -
+[2022-08-23 12:33:55,305] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:33:55] "GET /user HTTP/1.1" 200 -
+[2022-08-23 12:33:56,346] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:33:56] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-23 12:33:59,086] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:33:59] "GET /filtered_possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-23 12:34:01,225] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:34:01] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-23 12:34:01,918] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:34:01] "GET /user HTTP/1.1" 200 -
+[2022-08-23 12:34:02,639] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:34:02] "GET /register HTTP/1.1" 200 -
+[2022-08-23 12:34:17,455] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:34:17] "[32mPOST /register HTTP/1.1[0m" 302 -
+[2022-08-23 12:34:17,462] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:34:17] "GET /user HTTP/1.1" 200 -
+[2022-08-23 12:34:19,944] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:34:19] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-23 12:34:21,170] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:34:21] "GET /filtered_possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-23 12:34:22,297] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:34:22] "GET /keyword_typos HTTP/1.1" 200 -
+[2022-08-23 12:34:24,873] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:34:24] "GET /home HTTP/1.1" 200 -
+[2022-08-23 12:36:46,411] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:36:46] "GET /home HTTP/1.1" 200 -
+[2022-08-23 12:36:48,233] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:36:48] "GET /filtered_possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-23 12:36:50,254] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:36:50] "GET /filtered_possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-23 12:36:51,383] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:36:51] "GET /filtered_possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-23 12:36:58,109] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:36:58] "GET /filtered_possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-23 12:36:59,455] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:36:59] "GET /filtered_possible_phishing_domains HTTP/1.1" 200 -
+[2022-08-23 12:37:00,518] INFO _log: 127.0.0.1 - - [23/Aug/2022 12:37:00] "GET /filtered_possible_phishing_domains HTTP/1.1" 200 -

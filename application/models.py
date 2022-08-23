@@ -1,5 +1,4 @@
 import datetime
-import enum
 
 from application import db
 
@@ -55,7 +54,6 @@ class RealWebPageContent(db.Model):
     response_code = db.Column(db.Integer)
     headers = db.Column(db.String)
     css_links = db.Column(db.JSON)
-
 
 
 class PhishingPageContent(db.Model):
